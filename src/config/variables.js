@@ -3,15 +3,15 @@
 /**
  * Variables de deploy
 
-exports.api = 'https://www.demos-web.com';
-exports.ws = "https://demos-krb.herokuapp.com";
-exports.web = "https://demos-krb.herokuapp.com";
+exports.api = 'http://localhost:9000';
+exports.ws = "ws://localhost:9000";
+exports.web = "http://localhost:3000";
  */
 
 
 /**
  * Variables de desarrollo
  */
-exports.api = 'https://www.demos-web.com';
-exports.ws = "https://demos-krb.herokuapp.com";
-exports.web = "https://demos-krb.herokuapp.com";
+exports.api = 'http://localhost:9000';
+exports.ws = "ws://localhost:9000";
+exports.web = "http://localhost:3000";

@@ -4,12 +4,12 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //Apollo configuration object options
-import { split } from 'apollo-link';
-import { ApolloClient } from 'apollo-client';
+import { 
+  split, getMainDefinition,
+  ApolloClient, createHttpLink,
+  InMemoryCache
+} from 'apollo-boost';
 import { WebSocketLink } from 'apollo-link-ws';
-import { createHttpLink } from 'apollo-link-http';
-import { getMainDefinition } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { api, web, ws } from './../config/deploy';
 
 //Componentes
