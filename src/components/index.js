@@ -4,13 +4,13 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //Apollo configuration object options
-import { 
-  split, getMainDefinition,
-  ApolloClient, createHttpLink,
-  InMemoryCache
-} from 'apollo-boost';
+import { split } from 'apollo-link';
+import { ApolloClient } from 'apollo-client';
 import { WebSocketLink } from 'apollo-link-ws';
-import { api, web, ws } from './../config/deploy';
+import { createHttpLink } from 'apollo-link-http';
+import { getMainDefinition } from 'apollo-utilities';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { api, ws } from './../config/variables';
 
 //Componentes
 import LandingPage from './landing_page';
@@ -18,13 +18,13 @@ import LandingPage from './landing_page';
 
 // Crear el link
 const httpLink = createHttpLink({
-  uri: `${demos_gql_http}/graphql`,
+  uri: `${api}/graphql`,
   credentials: 'include'
 });
 
 // Crear el web socket link
 const wsLink = new WebSocketLink({
-  uri: `${demos_gql_ws}/subscriptions`,
+  uri: `${ws}/subscriptions`,
   options: {
     reconnect: true
   }
@@ -49,10 +49,6 @@ const client = new ApolloClient({
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <ApolloProvider client={client} >
