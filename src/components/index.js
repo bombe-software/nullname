@@ -13,7 +13,7 @@ import { api, ws } from './../config/variables';
 
 //Componentes
 import LandingPage from './landing_page';
-import Prueba from './prueba';
+import Prueba from './comparador/prueba';
 
 // Crear el link
 const httpLink = createHttpLink({
