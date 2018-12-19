@@ -13,7 +13,7 @@ import { api, ws } from './../config/variables';
 
 //Componentes
 import LandingPage from './landing_page';
-import Prueba from './comparador/prueba';
+import Comparador from './comparador/comparador';
 
 // Crear el link
 const httpLink = createHttpLink({
@@ -53,7 +53,7 @@ class App extends Component {
       <ApolloProvider client={client} >
         <BrowserRouter>
           <Switch>
-            <Route path="/prueba" component={Prueba} />
+            <Route path="/comparador/:id1/:id2" component={Comparador} />
             <Route path="/" component={LandingPage} />
           </Switch>
         </BrowserRouter>
