@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import _ from 'lodash';
+import LoadingAnimation from "./../loadingAnimation"
 
 import carrera2 from '../../queries/carrera2';
 
 class Comparador extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            selected: 0,
+            categorias: {
+                //Matemáticas, Humanistas, etc
+            }
+        }
+    }
+
+    onclick(index) {
+        this.setState({selected: index});
+    }
+
     deleteAccent(s) {
         var mapaAcentos = {
             'á': 'A', 'é': 'E', 'í': 'I', 'ó': 'O', 'ú': 'U',
@@ -139,12 +155,12 @@ class Comparador extends Component {
             <div>
                 {(array1.length === 0) ?
                     <div key='1'>
-                        <h3>Carrera {this.props.data.carrera2[0].nombre}: </h3>
+                        <h3 className="title is-3">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         No existen materias diferentes
                     </div>
                     :
                     <div key='1'>
-                         <h3>Carrera {this.props.data.carrera2[0].nombre}: </h3>
+                         <h3 className="title is-3">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         {array1.map((e) => {
                             return (
                                 <div key={e.id}>
@@ -157,12 +173,12 @@ class Comparador extends Component {
                
                 {(array2.length === 0) ?
                     <div key='2'>
-                        <h3>Carrera {this.props.data.carrera2[1].nombre}: </h3>
+                        <h3 className="title is-3">Carrera {this.props.data.carrera2[1].nombre}: </h3>
                         No existen materias diferentes
                     </div>
                     :
                     <div key='2'>
-                        <h3>Carrera {this.props.data.carrera2[1].nombre}: </h3>
+                        <h3 className="title is-3">Carrera {this.props.data.carrera2[1].nombre}: </h3>
                         {array2.map((e) => {
                             return (
                                 <div key={e.id}>
@@ -174,12 +190,12 @@ class Comparador extends Component {
                 }
                 {(array.length === 0) ?
                     <div key='3'>
-                        <h3>Materias Compartidas:</h3>
+                        <h3 className="subtitle is-3">Materias Compartidas:</h3>
                         No hay materias para comparar
                     </div>
                     :
                     <div key='3'>
-                        <h3>Materias Compartidas:</h3>
+                        <h3 className="subtitle is-3">Materias Compartidas:</h3>
                         {array.map((e) => {
                             return (
                                 <div key={e[0].id}>
@@ -195,7 +211,8 @@ class Comparador extends Component {
     }
 
     render() {
-        if (this.props.data.loading) return "Cargando";
+        if (this.props.data.loading) return (<LoadingAnimation />)
+            
         let array1 = Object.values(_.groupBy(this.props.data.carrera2[0].materias, o => {
             return o.categoria.id
         }));
@@ -204,23 +221,82 @@ class Comparador extends Component {
         });
         return (
             <div>
-                {array1.map((e) => {
+
+{
+    //Cabecera
+}
+
+                <section className="hero is-info is-bold">
+                <div className="hero-body">
+                    <div className="container">
+                    <h1 className="title">
+                        Comparador
+                    </h1>
+                    <h2 className="subtitle">
+                        Compara las carreras en distintas escuelas conforme a sus materias
+                    </h2>
+                    </div>
+                </div>
+                </section>
+{
+    //Lista comparativa
+}
+                <div className="container">
+                <div className="columns">
+
+{
+    //Menu de categorias
+}
+                
+                <div className="column is-3">
+                <div className="section">
+                <aside className="menu">
+                    <p className="menu-label">
+                    Categorías
+                    </p>
+                    <ul className="menu-list">
+                    {
+                        array1.map((e, index) => {
+                           
+                        return (
+                            <div key={e[0].categoria.id} id={"menu-categoria"+index} onClick={this.onclick.bind(this, index)}>
+                                <li><a>{e[0].categoria.nombre}</a></li>
+                            </div>
+                        )
+                        })
+                    }
+                    </ul>
+                </aside>
+                </div>
+                </div>
+
+{
+    //Lista de materias
+}
+                <div className="column is-10">
+                <div className="section" id="listaComparativa">
+                
+                {array1.map((e, index) => {
                     if (JSON.stringify(array2[e[0].categoria.id]) !== '{}' && array2[e[0].categoria.id] !== undefined) {
                         return (
-                            <div key={e[0].categoria.id} >
-                                <h1>{e[0].categoria.nombre}</h1>
+                            <div key={e[0].categoria.id} id={"categoria"+index} className={"categoria"+this.state.selected!=="categoria"+index?"is-hidden":""}>
+                                <h1 className="title is-2">{e[0].categoria.nombre}</h1>
                                 {this.renderArea(e, array2[e[0].categoria.id])}
                             </div>
                         )
                     } else {
                         return (
-                            <div key={e[0].categoria.id} >
-                                <h1>{e[0].categoria.nombre}</h1>
+                            <div key={e[0].categoria.id} id={"categoria"+index} className={"categoria"+this.state.selected!=="categoria"+index?"is-hidden":""}>
+                                <h1 className="title is-2">{e[0].categoria.nombre}</h1>
                                 {this.renderAreaNula(e)}
                             </div>
                         )
                     }
                 })}
+                </div>
+                </div>
+                </div>
+                </div>
             </div>
         );
     }
