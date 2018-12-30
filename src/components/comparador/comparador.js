@@ -155,12 +155,12 @@ class Comparador extends Component {
             <div>
                 {(array1.length === 0) ?
                     <div key='1'>
-                        <h3 className="title is-3">Carrera {this.props.data.carrera2[0].nombre}: </h3>
+                        <h3 className="title is-4">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         No existen materias diferentes
                     </div>
                     :
                     <div key='1'>
-                         <h3 className="title is-3">Carrera {this.props.data.carrera2[0].nombre}: </h3>
+                         <h3 className="title is-4">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         {array1.map((e) => {
                             return (
                                 <div key={e.id}>
@@ -173,12 +173,12 @@ class Comparador extends Component {
                
                 {(array2.length === 0) ?
                     <div key='2'>
-                        <h3 className="title is-3">Carrera {this.props.data.carrera2[1].nombre}: </h3>
+                        <h3 className="title is-4">Carrera {this.props.data.carrera2[1].nombre}: </h3>
                         No existen materias diferentes
                     </div>
                     :
                     <div key='2'>
-                        <h3 className="title is-3">Carrera {this.props.data.carrera2[1].nombre}: </h3>
+                        <h3 className="title is-4">Carrera {this.props.data.carrera2[1].nombre}: </h3>
                         {array2.map((e) => {
                             return (
                                 <div key={e.id}>
@@ -190,12 +190,12 @@ class Comparador extends Component {
                 }
                 {(array.length === 0) ?
                     <div key='3'>
-                        <h3 className="subtitle is-3">Materias Compartidas:</h3>
+                        <h3 className="subtitle is-4">Materias Compartidas:</h3>
                         No hay materias para comparar
                     </div>
                     :
                     <div key='3'>
-                        <h3 className="subtitle is-3">Materias Compartidas:</h3>
+                        <h3 className="subtitle is-4">Materias Compartidas:</h3>
                         {array.map((e) => {
                             return (
                                 <div key={e[0].id}>
@@ -280,14 +280,14 @@ class Comparador extends Component {
                     if (JSON.stringify(array2[e[0].categoria.id]) !== '{}' && array2[e[0].categoria.id] !== undefined) {
                         return (
                             <div key={e[0].categoria.id} id={"categoria"+index} className={"categoria"+this.state.selected!=="categoria"+index?"is-hidden":""}>
-                                <h1 className="title is-2">{e[0].categoria.nombre}</h1>
+                                <h1 className="subtitle">{e[0].categoria.nombre}</h1>
                                 {this.renderArea(e, array2[e[0].categoria.id])}
                             </div>
                         )
                     } else {
                         return (
                             <div key={e[0].categoria.id} id={"categoria"+index} className={"categoria"+this.state.selected!=="categoria"+index?"is-hidden":""}>
-                                <h1 className="title is-2">{e[0].categoria.nombre}</h1>
+                                <h1 className="subtitle">{e[0].categoria.nombre}</h1>
                                 {this.renderAreaNula(e)}
                             </div>
                         )
