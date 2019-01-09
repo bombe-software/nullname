@@ -34,17 +34,17 @@ class Navbar extends Component {
 
                 <div id="navbarBasicExample"  className={this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
                     <div className="navbar-start">
-                        <Link to="./comparaCarrera" className="navbar-item">Compara carreras</Link>
-                        <Link to="./testVocacional" className="navbar-item">Test vocacional </Link>
+                        <Link to="./comparador" className="navbar-item">Compara carreras</Link>
+                        <Link to="./test" className="navbar-item">Test vocacional </Link>
                         <Link to="./mapa" className="navbar-item">Mapa </Link>
-                        <Link to="./datosInteresantes" className="navbar-item">Datos interesantes </Link>
+                        <Link to="./datos_importantes" className="navbar-item">Datos interesantes </Link>
                         <div className="navbar-item has-dropdown is-hoverable">
                             <span className="navbar-link">Mas</span>
                             <div className="navbar-dropdown">
                                 <Link to="./ayuda" className="navbar-item">Ayuda </Link>
                                 <Link to="./acercaDe" className="navbar-item">Acerca de </Link>
                                 <hr className="navbar-divider" />
-                                <Link to="./reportabug" className="navbar-item">Reporta un problema</Link>
+                                <Link to="./reportarBug" className="navbar-item">Reporta un problema</Link>
                             </div>
                         </div>
                     </div>
