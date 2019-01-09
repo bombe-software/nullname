@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Mapa extends Component {
     render() {
         return (
-            <div>
-
+            <div className="box">
+            Formulario
             </div>
         );
     }
