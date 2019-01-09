@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 class FormularioGenerico extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+    
   renderTextField({ input, label, meta: { touched, error }, ...custom }) {
     return (
       <TextField hintText={label}
