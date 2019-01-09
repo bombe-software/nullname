@@ -2,23 +2,37 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          isToggleOn: false
+        };
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+          isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
     render() {
         return (
             <div>
             <nav className="navbar is-transparent  is-fixed-top color-navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <Link className="navbar-item" to="https://bulma.io">
+                    <Link className="navbar-item" to="/bulma">
                         <img src="https://bulma.io/images/bulma-logo.png"  alt="Logo" width="112" height="28" />
                     </Link>
 
-                    <span role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span className={this.state.isToggleOn ? 'navbar-burger burger is-active' : 'navbar-burger burger'} data-target="nav-demos-menu" onClick={this.handleClick}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </span>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+                <div id="navbarBasicExample"  className={this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
                     <div className="navbar-start">
                         <Link to="./comparador" className="navbar-item">Compara carreras</Link>
                         <Link to="./test" className="navbar-item">Test vocacional </Link>
