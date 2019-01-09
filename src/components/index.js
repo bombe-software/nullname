@@ -14,7 +14,10 @@ import { api, ws } from './../config/variables';
 //Componentes
 import LandingPage from './landing_page';
 import Comparador from './comparador/comparador';
+import TestVocacional from './test_vocacional/test_vocacional';
+import Mapa from './mapa/mapa';
 
+import Navbar from './reutilizable/navbar';
 // Crear el link
 const httpLink = createHttpLink({
   uri: `${api}/graphql`,
@@ -52,10 +55,17 @@ class App extends Component {
     return (
       <ApolloProvider client={client} >
         <BrowserRouter>
-          <Switch>
-            <Route path="/comparador/:id1/:id2" component={Comparador} />
-            <Route path="/" component={LandingPage} />
-          </Switch>
+          <div>
+            <Navbar/>
+            <Switch>
+              <Route path="/comparador" component={Comparador} />
+              <Route path="/comparador/:id1/:id2" component={Comparador} />
+              <Route path="/test" component={TestVocacional} />
+              <Route path="/mapa" component={Mapa} />
+
+              <Route path="/" component={LandingPage} />
+            </Switch>
+          </div>
         </BrowserRouter>
       </ApolloProvider>
     );
