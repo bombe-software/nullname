@@ -21,7 +21,7 @@ class Navbar extends Component {
             <div>
             <nav className="navbar is-transparent  is-fixed-top color-navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <Link className="navbar-item" to="/bulma">
+                    <Link className="navbar-item" to="/">
                         <img src="https://bulma.io/images/bulma-logo.png"  alt="Logo" width="112" height="28" />
                     </Link>
 
@@ -31,7 +31,7 @@ class Navbar extends Component {
                         <span aria-hidden="true"></span>
                     </span>
                 </div>
-
+                
                 <div id="navbarBasicExample"  className={this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
                     <div className="navbar-start">
                         <Link to="./comparador" className="navbar-item">Compara carreras</Link>

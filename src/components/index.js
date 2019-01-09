@@ -20,6 +20,7 @@ import DatosImportantes from './datos_importantes/datos_importantes';
 import Ayuda from './mas/ayuda';
 import ReportarBug from './mas/reportar_bug';
 import AcercaDe from './mas/acerca_de';
+import NotFound from './reutilizable/not_found'
 
 import Navbar from './reutilizable/navbar';
 // Crear el link
@@ -71,7 +72,9 @@ class App extends Component {
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
 
-              <Route path="/" component={LandingPage} />
+              <Route exact path="/" component={LandingPage} />
+
+              <Route path="/" component={NotFound} />
             </Switch>
           </div>
         </BrowserRouter>
