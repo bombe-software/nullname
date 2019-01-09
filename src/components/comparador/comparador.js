@@ -158,7 +158,7 @@ class Comparador extends Component {
                         <h3 className="title is-4">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         No existen materias diferentes
                     </div>
-                    :
+                    : 
                     <div key='1'>
                          <h3 className="title is-4">Carrera {this.props.data.carrera2[0].nombre}: </h3>
                         {array1.map((e) => {
@@ -260,7 +260,7 @@ class Comparador extends Component {
                            
                         return (
                             <div key={e[0].categoria.id} id={"menu-categoria"+index} onClick={this.onclick.bind(this, index)}>
-                                <li><a>{e[0].categoria.nombre}</a></li>
+                                <li><span>{e[0].categoria.nombre}</span></li>
                             </div>
                         )
                         })

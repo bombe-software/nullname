@@ -2,39 +2,35 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
-    constructor(props) {
-        super(props);
-        this.renderNavbar = this.renderNavbar.bind(this);
-    }
-    renderNavbar() {
+    render() {
         return (
             <div>
             <nav className="navbar is-transparent  is-fixed-top color-navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="https://bulma.io">
-                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-                    </a>
+                    <Link className="navbar-item" to="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png"  alt="Logo" width="112" height="28" />
+                    </Link>
 
-                    <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </a>
+                    </span>
                 </div>
 
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
-                        <a href="./comparaCarrera" className="navbar-item">Compara carreras</a>
-                        <a href="./testVocacional" className="navbar-item">Test vocacional </a>
-                        <a href="./mapa" className="navbar-item">Mapa </a>
-                        <a href="./datosInteresantes" className="navbar-item">Datos interesantes </a>
+                        <Link to="./comparaCarrera" className="navbar-item">Compara carreras</Link>
+                        <Link to="./testVocacional" className="navbar-item">Test vocacional </Link>
+                        <Link to="./mapa" className="navbar-item">Mapa </Link>
+                        <Link to="./datosInteresantes" className="navbar-item">Datos interesantes </Link>
                         <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link">Mas</a>
+                            <span className="navbar-link">Mas</span>
                             <div className="navbar-dropdown">
-                                <a href="./ayuda" className="navbar-item">Ayuda </a>
-                                <a href="./acercaDe" className="navbar-item">Acerca de </a>
+                                <Link to="./ayuda" className="navbar-item">Ayuda </Link>
+                                <Link to="./acercaDe" className="navbar-item">Acerca de </Link>
                                 <hr className="navbar-divider" />
-                                <a href="./reportabug" className="navbar-item">Reporta un problema</a>
+                                <Link to="./reportabug" className="navbar-item">Reporta un problema</Link>
                             </div>
                         </div>
                     </div>
