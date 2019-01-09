@@ -19,7 +19,7 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-            <nav className="navbar is-transparent  is-fixed-top color-navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-transparent color-navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/">
                         <img src="https://bulma.io/images/bulma-logo.png"  alt="Logo" width="112" height="28" />
