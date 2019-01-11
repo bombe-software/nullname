@@ -13,7 +13,8 @@ export default gql`
       posicion,
       universidad{
         id,
-        nombre
+        nombre,
+        abreviatura
       }
     }
 }
