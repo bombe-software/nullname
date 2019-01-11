@@ -71,7 +71,7 @@ class App extends Component {
               <Route path="/test" component={TestVocacional} />
               <Route path="/ayuda" component={Ayuda} />
               <Route path="/reportarBug" component={ReportarBug} />
-              <Route path="/acercaDe" component={AcercaDe} />
+              <Route path="/acerca_de" component={AcercaDe} />
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
 

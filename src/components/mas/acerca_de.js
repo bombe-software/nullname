@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import laptop from './../../assets/laptop.jpg'
 
 class AcercaDe extends Component {
     render() {
@@ -21,7 +22,7 @@ class AcercaDe extends Component {
                 <div className="box">
                     <article className="media">
                         <div className="media-left">
-                            <img src=".../assets/laptop.jpg" alt="Laptop" />
+                            <img src={laptop} alt="Laptop" />
                         </div>
                         <div className="media-content">
                             <div className="content">
