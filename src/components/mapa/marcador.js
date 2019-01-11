@@ -10,47 +10,32 @@ class Marcador extends Component {
         super(props);
 
         this.state = {
-            isOpen: false
+            isOpen: this.props.recuperado
         };
 
         this.open = this.open.bind(this);
         this.close = this.close.bind(this);
     }
 
-    /**
-    * Es una forma de capturar cualquier error en la clase 
-    * y que este no crashe el programa, ayuda con la depuracion
-    * de errores
-    * @method componentDidCatch
-    * @const info Es más informacion acerca del error
-    * @const error Es el titulo del error
-    */
-    componentDidCatch(error, info) {
-        console.log("Error: " + error);
-        console.log("Info: " + info);
-    }
-
     open(){
-        this.setState({
-            isOpen: true
-        })
+        this.props.ajustar(parseFloat(this.props.element.posicion.split(',')[0]), parseFloat(this.props.element.posicion.split(',')[1]), 15, this.props.element.id);
     }
 
     close(){
-        this.setState({
-            isOpen: false
-        })
+        this.props.ajustar(24, -104, 4.8, ''); 
     }
 
     render() {
         return (
             <Marker
-                key={this.props.id}
-                position={{ lat: parseFloat(this.props.ubicacion.split(',')[0]), lng: parseFloat(this.props.ubicacion.split(',')[1]) }}
+                key={this.props.element.id}
+                position={{ lat: parseFloat(this.props.element.posicion.split(',')[0]), lng: parseFloat(this.props.element.posicion.split(',')[1]) }}
                 onClick={this.open}
             >
                 {this.state.isOpen ? <InfoWindow onCloseClick={this.close}>
-                    <div>Titulo: {this.props.nombre}</div>
+                    <div>
+                        {this.props.element.nombre}
+                    </div>
                 </InfoWindow> : ''}
             </Marker>
         )
