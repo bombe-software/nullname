@@ -4,50 +4,50 @@ class AcercaDe extends Component {
     render() {
         return (
             <div>
-                <section class="hero is-link has-background-link is-medium">
-                    <div class="hero-body">
-                        <div class="container has-text-centered ">
-                            <h1 class="title">
+                <section className="hero is-link has-background-link is-medium">
+                    <div className="hero-body">
+                        <div className="container has-text-centered ">
+                            <h1 className="title">
                                 ACERCA DE NOSOTROS
       </h1>
                             <hr />
-                            <h2 class="subtitle">
+                            <h2 className="subtitle">
                                 En Unitips estamos completamente comprometidos con la educación en México y la distribución del conocimiento.
       </h2>
                         </div>
                     </div>
                 </section>
 
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
+                <div className="box">
+                    <article className="media">
+                        <div className="media-left">
                             <img src=".../assets/laptop.jpg" alt="Laptop" />
                         </div>
-                        <div class="media-content">
-                            <div class="content">
+                        <div className="media-content">
+                            <div className="content">
                                 <p>
                                     <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
                                     <br />
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
         </p>
                             </div>
-                            <nav class="level is-mobile">
-                                <div class="level-left">
-                                    <a class="level-item" aria-label="reply">
-                                        <span class="icon is-small">
-                                            <i class="fas fa-reply" aria-hidden="true"></i>
+                            <nav className="level is-mobile">
+                                <div className="level-left">
+                                    <span className="level-item" aria-label="reply">
+                                        <span className="icon is-small">
+                                            <i className="fas fa-reply" aria-hidden="true"></i>
                                         </span>
-                                    </a>
-                                    <a class="level-item" aria-label="retweet">
-                                        <span class="icon is-small">
-                                            <i class="fas fa-retweet" aria-hidden="true"></i>
+                                    </span>
+                                    <span className="level-item" aria-label="retweet">
+                                        <span className="icon is-small">
+                                            <i className="fas fa-retweet" aria-hidden="true"></i>
                                         </span>
-                                    </a>
-                                    <a class="level-item" aria-label="like">
-                                        <span class="icon is-small">
-                                            <i class="fas fa-heart" aria-hidden="true"></i>
+                                    </span>
+                                    <span className="level-item" aria-label="like">
+                                        <span className="icon is-small">
+                                            <i className="fas fa-heart" aria-hidden="true"></i>
                                         </span>
-                                    </a>
+                                    </span>
                                 </div>
                             </nav>
                         </div>
