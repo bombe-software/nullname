@@ -1,88 +1,98 @@
 import React, { Component } from 'react';
+import TextField from '@material-ui/core/TextField';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Checkbox from '@material-ui/core/Checkbox'
+import SelectField from "@material-ui/core/Select";
 
-class FormularioGenerico extends Component {
+class GenericForm extends Component {
 
-  renderTextField({ input, label, meta: { touched, error }, ...custom }) {
-    return (
-      <TextField hintText={label}
-        floatingLabelText={label}
-        errorText={touched && error}
-
-        {...input}
-        {...custom}
-      />
-    );
-  }
-
-
-  renderTextArea({ input, label, meta: { touched, error }, ...custom }) {
+  renderTextField({ input: { value, name, onChange }, label, meta, ...rest }) {
     return (
       <TextField
-        floatingLabelText={label}
-        errorText={touched && error}
-        multiLine={true}
-        rows={4}
-        rowsMax={4}
-        {...input}
-        {...custom}
+        {...rest}
+        label={label}
+        name={name}
+        helperText={meta.touched ? meta.error : undefined}
+        error={meta.error && meta.touched}
+        onChange={onChange}
+        value={value}
       />
     );
   }
 
-
-  renderPasswordField({ input, label, meta: { touched, error }, ...custom }) {
+  renderCheckbox({ input: { checked, value, name, onChange }, label, meta, ...rest }) {
     return (
-      <PasswordField hintText={""}
-        floatingLabelText={label}
-        errorText={touched && error}
-        {...input}
-        {...custom}
+      <Checkbox
+        {...rest}
+        name={name}
+        onChange={onChange}
+        error={meta.error && meta.touched}
+        checked={!!checked}
+        value={value}
       />
     );
   }
 
-  renderCheckbox({ input, label }) {
+  renderRadioGroup({ input: { checked, value, name, onChange }, children, label, meta, ...rest }) {
     return (
-      <Checkbox label={label}
-        checked={input.value ? true : false}
-        onCheck={input.onChange}
-
+      <RadioGroup
+        {...rest}
+        children={children}
+        name={name}
+        onChange={onChange}
+        value={value}
       />
-
     );
   }
 
-  renderRadioGroup({ input, ...rest }) {
-    return (
-      <RadioButtonGroup {...input} {...rest}
-        valueSelected={input.value}
-        onChange={(event, value) => input.onChange(value)} />
-    );
-  }
-
-  renderDateField({ input, label, meta: { touched, error }, ...custom }) {
-    return (
-      <DatePicker
-        floatingLabelText={label}
-        errorText={touched && error}
-        {...custom}
-
-        onChange={(event, value) => input.onChange(value)}
-      />
-
-    );
-  }
-  renderSelectField({ input, label, meta: { touched, error }, children, ...custom }) {
+  renderSelectField({ input: { name, value, onChange }, label, meta, children, ...rest }) {
     return (
       <SelectField
-        floatingLabelText={label}
-        errorText={touched && error}
-        {...input}
-        onChange={(event, index, value) => input.onChange(value)}
+        {...rest}
+        name={name}
+        autoWidth={true}
+        label={label}
+        error={meta.error && meta.touched}
+        onChange={onChange}
         children={children}
-        {...custom} />
+        value={value}
+      />
+    );
+  }
+  renderAreaText({ input: { name, onChange, value }, meta, ...rest }) {
+    return (
+      <TextField
+        {...rest}
+        name={name}
+        multiline
+        helperText={meta.touched ? meta.error : undefined}
+        error={meta.error && meta.touched}
+        onChange={onChange}
+        value={value}
+      />
+    );
+  }
+
+  /**
+  * Es una forma de capturar cualquier error en la clase 
+  * y que este no crashe el programa, ayuda con la depuracion
+  * de errores
+  * @method componentDidCatch
+  * @const info Es más informacion acerca del error
+  * @const error Es el titulo del error
+  */
+  componentDidCatch(error, info) {
+    console.log("Error: " + error);
+    console.log("Info: " + info);
+  }
+
+  render() {
+    return (
+      <div>
+
+      </div>
     );
   }
 }
 
-export default FormularioGenerico;
+export default GenericForm;

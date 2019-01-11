@@ -23,6 +23,7 @@ import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
 import Motor from './comparador/motor';
 import Footer from './reutilizable/footer'
+import FormExample from './reutilizable/formExample';
 
 import Navbar from './reutilizable/navbar';
 // Crear el link
@@ -76,7 +77,8 @@ class App extends Component {
               <Route path="/mapa" component={Mapa} />
 
               <Route exact path="/" component={LandingPage} />
-
+              
+              <Route path="/form" component={FormExample} />
               <Route path="/" component={NotFound} />
             </Switch>
             <Footer />
