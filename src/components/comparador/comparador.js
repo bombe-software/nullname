@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from "react-router-dom";
 
-import LoadingAnimation from "../reutilizable/loadingAnimation"
+import LoadingScreen from "../reutilizable/loading_screen"
 
 import carreras from '../../queries/carreras';
 
@@ -49,7 +49,7 @@ class Comparador extends Component {
         });
     }
     render() {
-        if (this.props.data.loading) return <LoadingAnimation />;
+        if (this.props.data.loading) return <LoadingScreen />;
         return (
             <section>
                 <table className="table">

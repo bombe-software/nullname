@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import _ from 'lodash';
-import LoadingAnimation from "../reutilizable/loadingAnimation";
+import LoadingScreen from "../reutilizable/loading_screen";
 
 import carrera2 from '../../queries/carrera2';
 
@@ -93,7 +93,7 @@ class Motor extends Component {
                 }
             });
         });
-        if ((contador / maximum) >= 0.5) {
+        if ((contador / maximum) >= 0.6) {
             return true;
         } else {
             return false;
@@ -211,7 +211,7 @@ class Motor extends Component {
     }
 
     render() {
-        if (this.props.data.loading) return (<LoadingAnimation />)
+        if (this.props.data.loading) return (<LoadingScreen />)
             
         let array1 = Object.values(_.groupBy(this.props.data.carrera2[0].materias, o => {
             return o.categoria.id
