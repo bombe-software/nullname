@@ -21,7 +21,7 @@ import Ayuda from './mas/ayuda';
 import ReportarBug from './mas/reportar_bug';
 import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
-import Motor from './comparador/motor';
+import Motor from './comparador/motor2';
 import Footer from './reutilizable/footer'
 import FormExample from './reutilizable/formExample';
 

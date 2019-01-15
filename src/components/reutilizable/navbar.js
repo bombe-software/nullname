@@ -32,7 +32,7 @@ class Navbar extends Component {
                     </span>
                 </div>
                 
-                <div id="navbarBasicExample"  className={this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
+                <div className={this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'}>
                     <div className="navbar-start">
                         <Link to="/comparador" className="navbar-item">Compara carreras</Link>
                         <Link to="/test" className="navbar-item">Test vocacional </Link>
