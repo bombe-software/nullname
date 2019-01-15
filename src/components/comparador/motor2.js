@@ -131,7 +131,9 @@ class Comparador extends Component {
         return materias.map((e) => {
             let bool = false;
             carreras_iguales.forEach(o=>{
-                if(e.nombre === o){
+                let materia1 = this.prepareString(e.nombre);
+                let materia2 = this.prepareString(o);
+                if(this.compareArray(materia1, materia2)){
                     bool = true;
                 }
             })
