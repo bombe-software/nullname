@@ -8,6 +8,7 @@ query Carrera2($id1: ID!, $id2: ID!){
     materias{
       id,
       nombre,
+      semestre,
       categoria{
         id,
         nombre
