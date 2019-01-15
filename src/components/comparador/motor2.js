@@ -91,7 +91,7 @@ class Comparador extends Component {
                 }
             });
         });
-        if ((contador / maximum) >= 0.5) {
+        if ((contador / maximum) >= 0.6) {
             return true;
         } else {
             return false;
@@ -123,28 +123,52 @@ class Comparador extends Component {
     }
 
 
-    renderSemestre(materias) {
+    renderSemestre(materias, posicion) {
+        const carreras_iguales = this.compare(this.props.data.carrera2[0].materias, this.props.data.carrera2[1].materias, 'nombre').map(e =>{
+            return e[posicion];
+        });
+
         return materias.map((e) => {
-            if (e.categoria.nombre !== 'Optativa o Electiva') {
-                return (
-                    <div className="has-text-centered materia" key={e.id}>
-                        {e.nombre}
-                    </div>
-                );
-            } else {
-                return <div key={e.id}></div>
+            let bool = false;
+            carreras_iguales.forEach(o=>{
+                let materia1 = this.prepareString(e.nombre);
+                let materia2 = this.prepareString(o);
+                if(this.compareArray(materia1, materia2)){
+                    bool = true;
+                }
+            })
+            if(bool){
+                if (e.categoria.nombre !== 'Optativa o Electiva') {
+                    return (
+                        <div className="has-text-centered materia materia_compartida" key={e.id}>
+                            {e.nombre}
+                        </div>
+                    );
+                } else {
+                    return <div key={e.id}></div>
+                }
+            }else{
+                if (e.categoria.nombre !== 'Optativa o Electiva') {
+                    return (
+                        <div className="has-text-centered materia" key={e.id}>
+                            {e.nombre}
+                        </div>
+                    );
+                } else {
+                    return <div key={e.id}></div>
+                }
             }
         });
     }
 
-    renderCarrera(materias) {
+    renderCarrera(materias, posicion) {
         materias = Object.values(_.groupBy(materias, o => {
             return o.semestre
         }));
         return materias.map((e) => {
             return (
                 <div className='semestre' key={e[0].id}>
-                    {this.renderSemestre(e)}
+                    {this.renderSemestre(e, posicion)}
                 </div>
             );
         });
@@ -154,20 +178,18 @@ class Comparador extends Component {
 
     render() {
         if (this.props.data.loading) return (<LoadingScreen />)
-        const carreras_iguales = this.compare(this.props.data.carrera2[0].materias, this.props.data.carrera2[1].materias, 'nombre');
-
         return (
             <div>
                 <div>
-                    {this.props.data.carrera2[0].nombre}
+                {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
                     <div className='carrera'>
-                        {this.renderCarrera(this.props.data.carrera2[0].materias)}
+                        {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                     </div>
                 </div>
                 <div>
-                    {this.props.data.carrera2[1].nombre}
+                    {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
                     <div className='carrera'>
-                        {this.renderCarrera(this.props.data.carrera2[1].materias)}
+                        {this.renderCarrera(this.props.data.carrera2[1].materias, 1)}
                     </div>
                 </div>
 

@@ -8,6 +8,10 @@
     font-size: 0.8em;
 }
 
+.materia_compartida{
+    border-color: brown
+}
+
 .semestre{
     display: flex;
 }
