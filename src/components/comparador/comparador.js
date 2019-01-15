@@ -105,7 +105,7 @@ class Comparador extends Component {
                             <span onClick={() => { this.deleteCarrera(0) }}>{this.state.carreras.length === 0 ? '' : this.state.carreras[0].id}</span>
                             <span onClick={() => { this.deleteCarrera(1) }}>{this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id}</span>
 
-                            <Link to={'comparador/' + this.state.carreras[0] + '/' + this.state.carreras[1]}>
+                            <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id)+ '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
                                 <button className="button is-danger">
                                     Comparar
                         </button>
