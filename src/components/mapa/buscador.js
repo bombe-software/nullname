@@ -72,8 +72,12 @@ class Buscador extends Component {
                         <TextField
                             id={"campoBusqueda"}
                             placeholder="Escriba la escuela que desee buscar"
+                            label="Universidad"
                             onChange={this.onChange}
                             value={this.state.busqueda}
+                            InputLabelProps={{
+                                shrink: true,
+                              }}
                             fullWidth
                         />
                     </div>

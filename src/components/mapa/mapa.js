@@ -60,15 +60,18 @@ class Mapa extends Component {
                             <h1 className="title">
                                 Mapa
                             </h1>
+                            <h2 className="subtitle">
+                                Localiza las universidades que desee del pais.
+                            </h2>
                         </div>
                     </div>
                 </section>
                 <hr />
                 <section className="columns">
                     <div className='column is-one-third'>
-                    <Buscador  ajustar={ajuste} />
+                        <Buscador ajustar={ajuste} />
                     </div>
-                   
+
                     <MyMapComponent
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb3kUA8KdYfPy1MqVsfnVU-wxHzNhpm-8"
                         loadingElement={<div style={{ height: `100%` }} />}

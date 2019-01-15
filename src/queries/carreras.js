@@ -7,9 +7,9 @@ export default gql`
     nombre
     sede{
       id
-      abreviatura
+      abreviatura,
       universidad{
-        id
+        id,
         abreviatura
       }
     }
