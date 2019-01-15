@@ -6,6 +6,7 @@ export default gql`
       id,
       nombre,
       logo,
+      abreviatura,
       categoria{
         id
         nombre

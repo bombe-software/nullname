@@ -44,7 +44,7 @@ class Buscador extends Component {
             const string = this.validadoAcentos(this.state.busqueda.toLowerCase());
             var re = new RegExp(string);
             let list = _.filter(this.props.data.sedes, (o) => {
-                return re.test(this.validadoAcentos(o.nombre.toLowerCase()));
+                return re.test(this.validadoAcentos(o.nombre.toLowerCase()))||re.test(this.validadoAcentos(o.abreviatura.toLowerCase()));
             });
 
             if (list.length === 0) {
