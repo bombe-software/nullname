@@ -10,8 +10,8 @@ import carrera2 from '../../queries/carrera2';
 class Comparador extends Component {
     deleteAccent(s) {
         var mapaAcentos = {
-            'á': 'A', 'é': 'E', 'í': 'I', 'ó': 'O', 'ú': 'U',
-            'Á': 'A', 'É': 'E', 'Í': 'I', 'Ó': 'O', 'Ú': 'U'
+            'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
+            'Á': 'a', 'É': 'e', 'Í': 'i', 'Ó': 'o', 'Ú': 'u'
         };
         if (!s) { return ''; }
         var ret = '';
@@ -91,7 +91,7 @@ class Comparador extends Component {
                 }
             });
         });
-        if ((contador / maximum) >= 0.6) {
+        if ((contador / maximum) >= 0.5) {
             return true;
         } else {
             return false;
