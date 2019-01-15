@@ -181,7 +181,7 @@ class Comparador extends Component {
         return (
             <div>
                 <div>
-                {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
+                {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                     </div>
