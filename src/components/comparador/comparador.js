@@ -84,9 +84,9 @@ class Comparador extends Component {
                                         <th className="is-selected" >Nombre</th>
                                     </tr>
                                 </thead>
-                                <span style={{ overflowY: 'auto', height: '500px' }}>
+                                <div style={{ overflowY: 'auto', height: '500px' }}>
                                     {this.renderCarreras(this.state.carrerasProps)}
-                                </span>
+                                </div>
                             </table>
                         </div>
                         <div className="column">
@@ -96,14 +96,14 @@ class Comparador extends Component {
                                         <th className="is-selected" >Nombre</th>
                                     </tr>
                                 </thead>
-                                <span style={{ overflowY: 'auto', height: '500px' }}>
+                                <div style={{ overflowY: 'auto', height: '500px' }}>
                                     {this.renderCarreras(this.state.carrerasProps)}
-                                </span>
+                                </div>
                             </table>
                         </div>
                         <div className="column">
-                            <span onClick={() => { this.deleteCarrera(0) }}>{this.state.carreras.length === 0 ? '' : this.state.carreras[0].id}</span>
-                            <span onClick={() => { this.deleteCarrera(1) }}>{this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id}</span>
+                            <div className="box" onClick={() => { this.deleteCarrera(0) }}>{this.state.carreras.length === 0 ? '' : this.state.carreras[0].nombre}</div>
+                            <div className="box" onClick={() => { this.deleteCarrera(1) }}>{this.state.carreras.length <= 1 ? '' : this.state.carreras[1].nombre}</div>
 
                             <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id)+ '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
                                 <button className="button is-danger">
