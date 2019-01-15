@@ -2,9 +2,20 @@ import gql from 'graphql-tag';
 
 export default gql`
 {
-    carreras{
-      id,
-      nombre
+  carreras{
+    id,
+    nombre
+    sede{
+      id
+      abreviatura
+      universidad{
+        id
+        abreviatura
+      }
     }
   }
+
+}
+
+
 `;

@@ -54,7 +54,7 @@ class Comparador extends Component {
             return (
                 <tr key={o.id} onClick={() => { this.addCarrera(o) }}>
                     <td>
-                        {o.nombre}
+                        {o.nombre}-{o.sede.abreviatura}-<strong>{o.sede.universidad.abreviatura}</strong>
                     </td>
                 </tr>
             );
@@ -105,7 +105,7 @@ class Comparador extends Component {
                             <div className="box" onClick={() => { this.deleteCarrera(0) }}>{this.state.carreras.length === 0 ? '' : this.state.carreras[0].nombre}</div>
                             <div className="box" onClick={() => { this.deleteCarrera(1) }}>{this.state.carreras.length <= 1 ? '' : this.state.carreras[1].nombre}</div>
 
-                            <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id)+ '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
+                            <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id) + '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
                                 <button className="button is-danger">
                                     Comparar
                         </button>
