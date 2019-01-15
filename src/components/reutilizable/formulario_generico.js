@@ -15,6 +15,7 @@ class GenericForm extends Component {
         helperText={meta.touched ? meta.error : undefined}
         error={meta.error && meta.touched}
         onChange={onChange}
+        fullWidth
         value={value}
       />
     );

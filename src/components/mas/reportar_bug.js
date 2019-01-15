@@ -91,7 +91,7 @@ class ReportarBug extends GenericForm {
                                                     name="area"
                                                     rows="6"
                                                     component={this.renderAreaText}
-                                                    placeholder="Describa como es que soy pro"
+                                                    placeholder="Describa el error que ha encontrado"
                                                 />
                                             </span>
                                         </div>
