@@ -14,9 +14,8 @@ class Comparador extends Component {
             carreras: []
         };
     }
-    componentWillUpdate(nextProps, nextState) {
-        if (nextProps.data.carreras !== nextState.carrerasProps)
-            this.setState({ carrerasProps: nextProps.data.carreras });
+    componentWillReceiveProps(nextProps) {
+        this.setState({ carrerasProps: nextProps.data.carreras });
     }
 
     addCarrera(carrera) {
@@ -50,10 +49,10 @@ class Comparador extends Component {
     }
 
     renderCarreras(carreras) {
-        return carreras.map(o => {
+        return carreras.map(o => { 
             return (
                 <tr key={o.id} onClick={() => { this.addCarrera(o) }}>
-                    <td>
+                    <td> 
                         {o.nombre}-{o.sede.abreviatura}-<strong>{o.sede.universidad.abreviatura}</strong>
                     </td>
                 </tr>
@@ -69,51 +68,79 @@ class Comparador extends Component {
                         <div className="hero-body">
                             <div className="container">
                                 <h1 className="title">
-                                    Compare carreras</h1>
+                                    Comparar carreras</h1>
                             </div>
                         </div>
                     </section>
                 </div>
-                <hr />
-                <section>
+                <div className="box is-size-5 has-text-centered">En este apartado, usted podrá comparar las carreras que imparten diversas universidad del país con el fin de visualizar sus planes de estudios y tener un mejor panorama de las diferencias entre ellas.</div>
                     <div className="columns">
                         <div className="column">
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th className="is-selected" >Nombre</th>
+                                        <th className="is-selected" >Nombre de la primera carrera</th>
                                     </tr>
                                 </thead>
-                                <div style={{ overflowY: 'auto', height: '500px' }}>
-                                    {this.renderCarreras(this.state.carrerasProps)}
-                                </div>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div className="is-selected" style={{ overflowY: 'auto', height: '500px' }}>
+                                                <table>
+                                                    <tbody>
+                                                        {this.renderCarreras(this.state.carrerasProps)}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div className="column">
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th className="is-selected" >Nombre</th>
+                                        <th className="is-selected" >Nombre de la segunda carrera</th>
                                     </tr>
                                 </thead>
-                                <div style={{ overflowY: 'auto', height: '500px' }}>
-                                    {this.renderCarreras(this.state.carrerasProps)}
-                                </div>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div style={{ overflowY: 'auto', height: '500px' }}>
+                                                <table>
+                                                    <tbody>
+                                                        {this.renderCarreras(this.state.carrerasProps)}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div className="column">
-                            <div className="box" onClick={() => { this.deleteCarrera(0) }}>{this.state.carreras.length === 0 ? '' : this.state.carreras[0].nombre}</div>
-                            <div className="box" onClick={() => { this.deleteCarrera(1) }}>{this.state.carreras.length <= 1 ? '' : this.state.carreras[1].nombre}</div>
-
-                            <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id) + '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
-                                <button className="button is-danger">
-                                    Comparar
-                        </button>
-                            </Link>
-
+                            <article className="message is-link">
+                                <div className="message-header" >
+                                    {this.state.carreras.length === 0 ? 'Seleccione una carrera' : (this.state.carreras[0].nombre +"-"+this.state.carreras[0].sede.abreviatura +"-"+this.state.carreras[0].sede.universidad.abreviatura)}
+                                    <button className="delete hidden" onClick={() => this.state.carreras[0] ? this.deleteCarrera(0) : ''}></button>
+                                </div>
+                            </article>
+                            <article className="message is-info">
+                                <div className="message-header" >
+                                    {this.state.carreras.length <= 1 ? 'Seleccione otra carrera' :  (this.state.carreras[1].nombre +"-"+this.state.carreras[1].sede.abreviatura +"-"+this.state.carreras[1].sede.universidad.abreviatura)}
+                                    <button className="delete" onClick={() => this.state.carreras[1] ? this.deleteCarrera(1) : ''}></button>
+                                </div>
+                            </article>
+                            <div className="">
+                                <Link to={'comparador/' + (this.state.carreras.length <= 1 ? '' : this.state.carreras[1].id) + '/' + (this.state.carreras.length === 0 ? '' : this.state.carreras[0].id)}>
+                                    <button className="button is-danger">
+                                        Comparar
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </section>
             </div>
         );
     }
