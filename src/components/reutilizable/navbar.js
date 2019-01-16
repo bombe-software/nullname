@@ -47,16 +47,6 @@ class Navbar extends Component {
                                     <Link to="/reportar_bug" className="navbar-item">Reporta un problema</Link>
                                 </div>
                             </div>
-                            <div className="navbar-end">
-                                <div className="navbar-item">
-                                    <div className="control has-icons-right">
-                                        <input className="input" type="email" placeholder="Buscar una carrera" />
-                                        <span className="icon is-right">
-                                            <i className="fas fa-search"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </nav>
