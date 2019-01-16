@@ -148,11 +148,10 @@ class Comparador extends Component {
                 </div>
                 <div className="columns">
                     <div className="column">
-                    </div>
+                    </div>      
+                    <div className={(!this.state.list1 || !this.state.list2) ? "disabledDiv column" : 'column'}>
 
-                    <div className="column">
-
-                        <Link className={!this.state.list1 && !this.state.list2 ? "disabledDiv" : ''} to={'comparador/' + (this.state.carreras[0] === undefined ? '' : this.state.carreras[0].id) + '/' + (this.state.carreras[1] === undefined ? '' : this.state.carreras[1].id)}>
+                        <Link  to={'comparador/' + (this.state.carreras[0] === undefined ? '' : this.state.carreras[0].id) + '/' + (this.state.carreras[1] === undefined ? '' : this.state.carreras[1].id)}>
                             <button className="button is-large is-fullwidth is-danger">
                                 <strong>  Comparar</strong>
                             </button>
