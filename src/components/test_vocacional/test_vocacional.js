@@ -2,6 +2,7 @@ import React from 'react';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
+import question from './preguntas.json';
 
 class TestVocacional extends React.Component {
     constructor(props) {
@@ -39,10 +40,12 @@ class TestVocacional extends React.Component {
     renderSection(num) {
         return (
             <div className="field column">
-                <label className="label">{num}</label>
-                <div className="control">
-                    <input className="input" type="text" placeholder="Text input" />
-                </div>
+                {question.map((o)=>{
+                    console.log(o);
+                    return(<div>Hola</div>);
+
+                })}
+
                 <button className="button is-rounded is-danger" onClick={this.handleNextStep}>
                     Siguiente
         </button><br /><br />

@@ -1,3 +1,269 @@
-{
-    
-}
+[
+    {
+        "personales": [
+            {
+                "Pregunta": "Pregunta1",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta2",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta3",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta4",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta5",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion1"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion2"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "sociales": [
+            {
+                "Pregunta": "Pregunta1",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta2",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta3",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta4",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta5",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion1"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion2"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "laborales": [
+            {
+                "Pregunta": "Pregunta1",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta2",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta3",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta4",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion c"
+                    }
+                ]
+            },
+            {
+                "Pregunta": "Pregunta5",
+                "Respuesta": [
+                    {
+                        "categoria": "area1",
+                        "respuesta": "Opcion1"
+                    },
+                    {
+                        "categoria": "area2",
+                        "respuesta": "Opcion2"
+                    },
+                    {
+                        "categoria": "area3",
+                        "respuesta": "Opcion3"
+                    }
+                ]
+            }
+        ]
+    }
+]
