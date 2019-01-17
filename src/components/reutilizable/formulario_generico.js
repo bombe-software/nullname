@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Checkbox from '@material-ui/core/Checkbox'
-import SelectField from "@material-ui/core/Select";
 
 class GenericForm extends Component {
 
@@ -48,16 +47,16 @@ class GenericForm extends Component {
 
   renderSelectField({ input: { name, value, onChange }, label, meta, children, ...rest }) {
     return (
-      <SelectField
-        {...rest}
-        name={name}
-        autoWidth={true}
-        label={label}
-        error={meta.error && meta.touched}
-        onChange={onChange}
-        children={children}
-        value={value}
-      />
+      <div className="select is-fullwidth">
+        <select 
+          {...rest}
+          name={name}
+          onChange={onChange}
+          value={value}
+        >
+            {children}
+        </select>
+      </div>
     );
   }
   renderAreaText({ input: { name, onChange, value }, meta, ...rest }) {

@@ -4,7 +4,6 @@ import _ from 'lodash';
 import './../../assets/motor.css';
 
 import LoadingScreen from "../reutilizable/loading_screen";
-import PopUp from './pop_up';
 
 import carrera2 from '../../queries/carrera2';
 

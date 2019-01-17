@@ -1,9 +1,10 @@
 [
     {
-        "personales": [
+        "categoria": "Categoria 1",
+        "preguntas": [
             {
-                "Pregunta": "Pregunta1",
-                "Respuesta": [
+                "pregunta": "pregunta1",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -19,8 +20,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta2",
-                "Respuesta": [
+                "pregunta": "pregunta2",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -36,8 +37,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta3",
-                "Respuesta": [
+                "pregunta": "pregunta3",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -53,8 +54,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta4",
-                "Respuesta": [
+                "pregunta": "pregunta4",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -70,8 +71,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta5",
-                "Respuesta": [
+                "pregunta": "pregunta5",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion1"
@@ -89,10 +90,11 @@
         ]
     },
     {
-        "sociales": [
+        "categoria": "Categoria 2",
+        "preguntas": [
             {
-                "Pregunta": "Pregunta1",
-                "Respuesta": [
+                "pregunta": "pregunta6",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -108,8 +110,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta2",
-                "Respuesta": [
+                "pregunta": "pregunta7",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -125,8 +127,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta3",
-                "Respuesta": [
+                "pregunta": "pregunta8",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -142,8 +144,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta4",
-                "Respuesta": [
+                "pregunta": "pregunta9",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -159,8 +161,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta5",
-                "Respuesta": [
+                "pregunta": "pregunta10",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion1"
@@ -176,12 +178,12 @@
                 ]
             }
         ]
-    },
-    {
-        "laborales": [
+    },{
+        "categoria": "Categoria 3",
+        "preguntas": [
             {
-                "Pregunta": "Pregunta1",
-                "Respuesta": [
+                "pregunta": "pregunta11",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -197,8 +199,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta2",
-                "Respuesta": [
+                "pregunta": "pregunta12",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -214,8 +216,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta3",
-                "Respuesta": [
+                "pregunta": "pregunta13",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -231,8 +233,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta4",
-                "Respuesta": [
+                "pregunta": "pregunta14",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion a"
@@ -248,8 +250,8 @@
                 ]
             },
             {
-                "Pregunta": "Pregunta5",
-                "Respuesta": [
+                "pregunta": "pregunta15",
+                "respuestas": [
                     {
                         "categoria": "area1",
                         "respuesta": "Opcion1"
