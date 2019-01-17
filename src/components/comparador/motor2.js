@@ -4,6 +4,7 @@ import _ from 'lodash';
 import './../../assets/motor.css';
 
 import LoadingScreen from "../reutilizable/loading_screen";
+import PopUp from './pop_up';
 
 import carrera2 from '../../queries/carrera2';
 
@@ -20,6 +21,7 @@ class Comparador extends Component {
         }
         return ret;
     };
+
     prepareString(string) {
         let array = string.toLowerCase().split(" ");
         for (let i = 0; i < array.length; i++) {
@@ -124,20 +126,20 @@ class Comparador extends Component {
 
 
     renderSemestre(materias, posicion) {
-        const carreras_iguales = this.compare(this.props.data.carrera2[0].materias, this.props.data.carrera2[1].materias, 'nombre').map(e =>{
+        const carreras_iguales = this.compare(this.props.data.carrera2[0].materias, this.props.data.carrera2[1].materias, 'nombre').map(e => {
             return e[posicion];
         });
 
         return materias.map((e) => {
             let bool = false;
-            carreras_iguales.forEach(o=>{
+            carreras_iguales.forEach(o => {
                 let materia1 = this.prepareString(e.nombre);
                 let materia2 = this.prepareString(o);
-                if(this.compareArray(materia1, materia2)){
+                if (this.compareArray(materia1, materia2)) {
                     bool = true;
                 }
             })
-            if(bool){
+            if (bool) {
                 if (e.categoria.nombre !== 'Optativa o Electiva') {
                     return (
                         <div className="has-text-centered materia materia_compartida" key={e.id}>
@@ -147,7 +149,7 @@ class Comparador extends Component {
                 } else {
                     return <div key={e.id}></div>
                 }
-            }else{
+            } else {
                 if (e.categoria.nombre !== 'Optativa o Electiva') {
                     return (
                         <div className="has-text-centered materia" key={e.id}>
@@ -174,20 +176,20 @@ class Comparador extends Component {
         });
     }
 
-
-
     render() {
         if (this.props.data.loading) return (<LoadingScreen />)
         return (
             <div>
                 <div>
-                {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
+                    {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
+                    <button className='button' onClick={this.handleOpen(0)}>Abrir</button>
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                     </div>
                 </div>
                 <div>
                     {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
+                    <button className='button' onClick={this.handleOpen(1)}>Abrir</button>
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[1].materias, 1)}
                     </div>
