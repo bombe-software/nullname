@@ -52,7 +52,7 @@ class TestVocacional extends FormularioGenerico {
                     initialValues={!this.props.o ? {} : this.props.o.politico}
                     validate={values => {
                         const errors = {};
-                        
+
                         return errors;
                     }}
                     render={({ handleSubmit, reset, submitting, pristine, values }) => (
@@ -61,71 +61,65 @@ class TestVocacional extends FormularioGenerico {
                                 return (
                                     <div className='field' key={o.pregunta + question[num].categoria}>
                                         <label className="label">{o.pregunta}</label>
-                                                <Field name={o.pregunta}
-                                                    component={this.renderSelectField}
-                                                    label="Escoge una opcion"
-                                                >
-                                                        <option value={'default'}>Seleccione una opcion</option>
-                                                        {o.respuestas.map((o) => {
-                                                            return (
-                                                                <option key={o.respuesta + question[num].categoria} value={o.categoria}>
-                                                                    {o.respuesta}
-                                                                </option>
-                                                            );
-                                                        })}
-                                                </Field>
-                                        </div>
-                                        );
-                                    })}
+                                        <Field name={o.pregunta}
+                                            component={this.renderSelectField}
+                                            label="Escoge una opcion"
+                                        >
+                                            <option value={'default'}>Seleccione una opcion</option>
+                                            {o.respuestas.map((o) => {
+                                                return (
+                                                    <option key={o.respuesta + question[num].categoria} value={o.categoria}>
+                                                        {o.respuesta}
+                                                    </option>
+                                                );
+                                            })}
+                                        </Field>
+                                    </div>
+                                );
+                            })}
                             <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={this.handleNextStep}>Siguiente</button>
                         </form>
-                                )
-                            }
-                />
-                                < br /> <br />
-            </div>
-                        );
+                    )
                     }
-                
+                />
+                < br /> <br />
+            </div>
+        );
+    }
+
     render() {
         return (
             <div>
-                                <section className="hero is-link is-bold">
-                                    <div className="hero-body">
-                                        <div className="container">
-                                            <h1 className="title">
-                                                Test vocacional
+                <section className="hero is-link is-bold">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title">
+                                Test vocacional
                             </h1>
-                                            <h2 className="subtitle">
-                                                Descubre a que área profesional debes pertenecer con  tan sólo algunas cuantas preguntas.
+                            <h2 className="subtitle">
+                                Descubre a que área profesional debes pertenecer con  tan sólo algunas cuantas preguntas.
                             </h2>
-                                        </div>
-                                    </div>
-                                </section>
-                                <Stepper alternativeLabel nonLinear activeStep={this.state.activeStep}>
-                                    <Step>
-                                        <StepButton completed={this.getCompleted(0)}>
-                                            Paso 1
-                </StepButton>
-                                    </Step>
-                                    <Step>
-                                        <StepButton completed={this.getCompleted(1)}>
-                                            Paso 2
-                </StepButton>
-                                    </Step>
-                                    <Step>
-                                        <StepButton completed={this.getCompleted(2)}>
-                                            Paso 3
-                </StepButton>
-                                    </Step>
-                                </Stepper>
-                                <div className='columns'>
-                                    <div className='column'></div>
-                                    {this.renderSection(this.state.activeStep)}
-                                    <div className='column'></div>
-                                </div>
-                            </div>
-                            );
-                        }
-                    }
+                        </div>
+                    </div>
+                </section>
+                <Stepper alternativeLabel nonLinear activeStep={this.state.activeStep}>
+                    {question.map((o) => {
+                        return (
+                            <Step key={o.categoria}>
+                                <StepButton completed={this.getCompleted(0)}>
+                                    {o.categoria}
+                                </StepButton>
+                            </Step>
+                        );
+                    })}
+                </Stepper>
+                <div className='columns'>
+                    <div className='column'></div>
+                    {this.renderSection(this.state.activeStep)}
+                    <div className='column'></div>
+                </div>
+            </div>
+        );
+    }
+}
 export default TestVocacional;
