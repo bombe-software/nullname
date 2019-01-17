@@ -8,7 +8,7 @@ class DatosImportantes extends Component {
                     <div className="hero-body">
                         <div className="container">
                             <h1 className="title">
-                                Sabias que...</h1>
+                                ¿Sabías que...</h1>
                         </div>
                     </div>
                 </section>

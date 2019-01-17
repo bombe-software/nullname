@@ -5,7 +5,6 @@ import pencil from './../assets/pencil.png';
 import mapa from './../assets/map.png';
 import brain from './../assets/interesant.png';
 import white from './../assets/white.png';
-import './../assets/acerca.css';
 import './../assets/landing_page.css';
 
 class LandingPage extends Component {
@@ -52,13 +51,14 @@ class LandingPage extends Component {
                 <div className="column is-6">
                   <h1 className="title is-1 comparaPadUp has-text-left">
                     Comparador de carrera
-                                    </h1>
+                  </h1>
                   <h2 className="subtitle hp-subtitle has-text-left">
-                    <br />Compara las carreras de las diversidas carreras que existen, con el fin de ver las materias que
-                                         comparten y sus enfoques diferentes. Sin duda, <strong>una gran herramienta </strong>¿no lo crees?
-                                    </h2>
+                    <br />
+                    Compara las carreras de las diversidas carreras que existen, con el fin de ver las materias que
+                    comparten y sus enfoques diferentes. Sin duda, <strong>una gran herramienta </strong>¿no lo crees?
+                  </h2>
                   <Link to='comparador'>
-                    <button className="button is-medium is-primary">
+                    <button className="button buttonGo is-medium is-primary">
                       ¡Comparar carreras!
                                         </button>
                   </Link>
@@ -78,7 +78,8 @@ class LandingPage extends Component {
               <div className="column is-three-fifths ">
                 <h1 className="title is-spaced is-size-2-desktop is-size-4-mobile has-text-white">Más módulos</h1>
                 <h2 className="subtitle is-size-5-desktop has-text-white">Para comenzar, divimos nuestra plataforma en tres módulos
-                                esenciales donde desplegaremos información. Cada uno retroalimenta la capacidad de diferenciar carreras de las universidades entre sí.</h2>
+                                esenciales donde desplegaremos información. Cada uno retroalimenta la capacidad de diferenciar carreras 
+                                de las universidades entre sí.</h2>
               </div>
             </div>
           </div>
