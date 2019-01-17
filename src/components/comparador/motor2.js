@@ -9,15 +9,6 @@ import PopUp from './pop_up';
 import carrera2 from '../../queries/carrera2';
 
 class Comparador extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activePopUp: -1
-        }
-        this.handleOpen = this.handleOpen.bind(this);
-        this.handleClose = this.handleClose.bind(this);
-    }
-
     deleteAccent(s) {
         var mapaAcentos = {
             'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
@@ -185,20 +176,10 @@ class Comparador extends Component {
         });
     }
 
-    handleOpen(activePopUp) {
-        return () => this.setState({ activePopUp });
-    }
-
-    handleClose() {
-        return () => this.setState({ activePopUp: -1 });
-    }
-
     render() {
         if (this.props.data.loading) return (<LoadingScreen />)
         return (
             <div>
-                {this.state.activePopUp === 0 ? (<PopUp id={this.props.data.carrera2[0].id} handleClose={this.handleClose()}></PopUp>) : ''}
-                {this.state.activePopUp === 1 ? (<PopUp id={this.props.data.carrera2[1].id} handleClose={this.handleClose()}></PopUp>) : ''}
                 <div>
                     {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
                     <button className='button' onClick={this.handleOpen(0)}>Abrir</button>
