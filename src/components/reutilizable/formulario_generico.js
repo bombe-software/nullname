@@ -47,15 +47,21 @@ class GenericForm extends Component {
 
   renderSelectField({ input: { name, value, onChange }, label, meta, children, ...rest }) {
     return (
-      <div className="select is-fullwidth">
-        <select 
-          {...rest}
-          name={name}
-          onChange={onChange}
-          value={value}
-        >
-            {children}
-        </select>
+      <div className="field">
+        <label className="label">{label}</label>
+        <div className="control has-icons-right">
+          <div className={"select is-fullwidth"+ (meta.error && meta.touched ? " is-danger" : '')}>
+            <select
+              {...rest}
+              name={name}
+              onChange={onChange}
+              value={value}
+            >
+              {children}
+            </select>
+          </div>
+        </div>
+        {meta.error && meta.touched ? <p className="help is-danger">{meta.error}</p> : ''}
       </div>
     );
   }

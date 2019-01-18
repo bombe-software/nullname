@@ -36,21 +36,26 @@ class TestVocacional extends FormularioGenerico {
         this.setState({ activeStep });
     }
 
-    handleNextStep() {
-        let { completed } = this.state;
-        completed.push(this.state.activeStep);
-        if (this.state.activeStep < question.length - 1) {
-            this.setState({
-                activeStep: this.state.activeStep + 1
-            });
+    handleNextStep(values) {
+        let is_error = false;
+        question[this.state.activeStep].preguntas.forEach((o)=>{
+            if(!values[o.pregunta]){
+               is_error = true;
+            }
+        });
+        if(!is_error){
+            let { completed } = this.state;
+            completed.push(this.state.activeStep);
+            if (this.state.activeStep < question.length - 1) {
+                this.setState({
+                    activeStep: this.state.activeStep + 1
+                });
+            }
         }
     }
     async onSubmit(values) {
-        this.setState({ contadorSubmit: this.state.contadorSubmit + 1 })
+        this.setState({ contadorSubmit: this.state.contadorSubmit + 1 });
         if (this.state.contadorSubmit === question.length) {
-            console.log(Object.values(_.groupBy(Object.values(values), (object) => {
-                return object;
-            })));
             let contador = 0;
             let areaProfesional = "";
             Object.values(_.groupBy(Object.values(values), (object) => {
@@ -62,7 +67,6 @@ class TestVocacional extends FormularioGenerico {
                 }
                 return true;
             })
-            console.log("Tu area profesional es" + areaProfesional);
             this.props.history.push({
                 pathname: '/resultado_test',
                 state: { resultado: { areaProfesional } }
@@ -75,22 +79,24 @@ class TestVocacional extends FormularioGenerico {
             <div className="column">
                 <Form
                     onSubmit={this.onSubmit}
-                    initialValues={!this.props.o ? {} : this.props.o.politico}
                     validate={values => {
                         const errors = {};
-
+                        question[num].preguntas.forEach((o)=>{
+                            if(!values[o.pregunta]){
+                                errors[o.pregunta] = 'Porfavor seleccione una informacion';
+                            }
+                        });
                         return errors;
                     }}
                     render={({ handleSubmit, reset, submitting, pristine, values }) => (
-                        <form onSubmit={handleSubmit}>
-
+                        <form onSubmit={handleSubmit} key={question[num].categoria}>
                             {question[num].preguntas.map((o) => {
                                 return (
-                                    <div className='field' key={o.pregunta + question[num].categoria}>
-                                        <label className="label">{o.pregunta}</label>
+                                    <div  key={o.pregunta + question[num].categoria}>
                                         <Field name={o.pregunta}
                                             component={this.renderSelectField}
-                                            label="Escoge una opcion"
+                                            label={o.pregunta}
+                                            active={num===this.state.activeStep}
                                         >
                                             <option value={'default'}>Seleccione una opción</option>
                                             {o.respuestas.map((o) => {
@@ -104,7 +110,7 @@ class TestVocacional extends FormularioGenerico {
                                     </div>
                                 );
                             })}
-                            <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={this.handleNextStep}>Siguiente</button>
+                            <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={()=>this.handleNextStep(values)}>Siguiente</button>
                         </form>
                     )
                     }
@@ -130,10 +136,10 @@ class TestVocacional extends FormularioGenerico {
                     </div>
                 </section>
                 <Stepper alternativeLabel nonLinear activeStep={this.state.activeStep}>
-                    {question.map((o) => {
+                    {question.map((o, i) => {
                         return (
                             <Step key={o.categoria}>
-                                <StepButton completed={this.getCompleted(2)}>
+                                <StepButton completed={this.getCompleted(i)}>
                                     {o.categoria}
                                 </StepButton>
                             </Step>
