@@ -54,7 +54,7 @@ class Buscador extends Component {
                 return (
                     <li className='hover_link' onClick={() => this.handle(element.posicion, element.id)} key={element.id}>
                         <span>{element.nombre} - <strong>{element.universidad.abreviatura}</strong></span>
-                        <hr class="dropdown-divider " />
+                        <hr className="dropdown-divider " />
                     </li>
                 );
             });
