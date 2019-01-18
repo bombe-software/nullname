@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import laptop from './../assets/laptop.jpg';
+import laptop from './../assets/students.jpg';
 import pencil from './../assets/pencil.png';
 import mapa from './../assets/map.png';
 import brain from './../assets/interesant.png';
@@ -21,21 +21,21 @@ class LandingPage extends Component {
             </h2>
           </div>
         </section>
-        <section className="hero is-primary">
+        <section className="hero has-background-black-ter">
           <div className="hero-body">
             <div className="container">
-              <div className="columns">
+              <div className="columns ">
                 <div className="column is-5 is-offset-1">
-                  <img src={white} alt="caca" />
+                  <img src={white} alt="imagen" />
                 </div>
                 <div className="column is-5">
-                  <p className="title">
+                  <p className="title has-text-white-ter ">
                     ¿Cómo me ayudará a informarme acerca de las universidades?
                                     </p>.
-                                    <p className="subtitle">
+                                    <p className="subtitle has-text-white-ter ">
                     La plataforma le brindará información acerca de las universidades con su ubicación asi como sus respectivas carreras.
                                     </p>
-                  <p className="subtitle">
+                  <p className="subtitle has-text-white-ter ">
                     Contamos una base de datos en donde tenemos miles de materias registradas de las respectivas carreras
                                         de las universidades. <strong>¿Genial no?</strong>
                   </p>
@@ -45,7 +45,7 @@ class LandingPage extends Component {
           </div>
         </section>
         <section className="hero">
-          <div className="hero-body hero-body-hp-main has-background-white">
+          <div className="hero-body hero-body-hp-main is-danger">
             <div className="container">
               <div className="columns">
                 <div className="column is-6">
@@ -58,7 +58,7 @@ class LandingPage extends Component {
                     comparten y sus enfoques diferentes. Sin duda, <strong>una gran herramienta </strong>¿no lo crees?
                   </h2>
                   <Link to='comparador'>
-                    <button className="button buttonGo is-medium is-primary">
+                    <button className="button buttonGo is-medium is-danger">
                       ¡Comparar carreras!
                                         </button>
                   </Link>
@@ -72,7 +72,7 @@ class LandingPage extends Component {
             </div>
           </div>
         </section>
-        <section className="section is-medium is-primary has-text-centered is-long-ish has-background-primary">
+        <section className="section is-medium has-background-danger has-text-centered is-long-ish has-background-primary">
           <div className="container">
             <div className="columns is-centered ">
               <div className="column is-three-fifths ">
@@ -92,7 +92,7 @@ class LandingPage extends Component {
                   <div className="box"><h2 className="titleBox">Test Vocacional</h2><img className="logo" src={pencil} alt="imageload" />
                     <p>No sabes por donde empezar? Descubre el <strong>área profesional</strong> al que deberías pertenecer con este sencillo test</p>
                     <Link to='test'>
-                      <button className="button is-primary buttonGo is-rounded">Ir ahora</button>
+                      <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ class LandingPage extends Component {
                   <div className="box"><h2 className="titleBox">Mapa</h2><img className="logo" src={mapa} alt="imageload" />
                     <p>¿Tienes alguna idea de cómo y dónde es alguna universidad? Si no sabes, ubícalo fácilmente desde el mapa</p>
                     <Link to='mapa'>
-                      <button className="button is-primary buttonGo is-rounded">Ir ahora</button>
+                      <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ class LandingPage extends Component {
                   <div className="box"><h2 className="titleBox">Datos interesantes</h2><img className="logo" src={brain} alt="imageload" />
                     <p>¿Interesado en algunas estadísticas? Descubre algunos datos que te podrían dar una mejor claridad de algunas universidades</p>
                     <Link to='datos_importantes'>
-                      <button className="button is-primary buttonGo is-rounded">Ir ahora</button>
+                      <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>
                   </div>
                 </div>
