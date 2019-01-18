@@ -18,7 +18,7 @@ import TestVocacional from './test_vocacional/test_vocacional';
 import Mapa from './mapa/mapa';
 import DatosImportantes from './datos_importantes/datos_importantes';
 import Ayuda from './mas/ayuda';
-import ReportarBug from './mas/reportar_bug';
+import EnviarComentario from './mas/enviar_comentario';
 import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
 import Motor from './comparador/motor2';
@@ -72,7 +72,7 @@ class App extends Component {
 
               <Route path="/test" component={TestVocacional} />
               <Route path="/ayuda" component={Ayuda} />
-              <Route path="/reportar_bug" component={ReportarBug} />
+              <Route path="/reportar_bug" component={EnviarComentario} />
               <Route path="/acerca_de" component={AcercaDe} />
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
