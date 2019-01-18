@@ -181,14 +181,13 @@ class Comparador extends Component {
             <div>
                 <div>
                     {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
-                    <button className='button' onClick={this.handleOpen(0)}>Abrir</button>
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                     </div>
                 </div>
                 <div>
                     {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
-                    <button className='button' onClick={this.handleOpen(1)}>Abrir</button>
+                    
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[1].materias, 1)}
                     </div>
