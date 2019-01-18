@@ -10,7 +10,7 @@ class Footer extends Component {
                         <div className="columns padTop is-mobile">
                             <ul className="column has-text-centered">
                                 <li className="footer-title">
-                                    <a href="https://mod.io" className="footer-logo">
+                                    <a href="pagenotfound" className="footer-logo">
                                         <span className=""><img className="avatar" width="90px" src={empresaWhite} alt="empresa_white" /></span>
                                     </a>
                                 </li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Ayuda extends Component {
+class Perfil extends Component {
     render() {
         return (
             <div>
@@ -8,7 +8,7 @@ class Ayuda extends Component {
                     <div className="hero-body">
                         <div className="container">
                             <h1 className="title">
-                                Ayuda</h1>
+                                ESCUELA SUPERIOR DE COMPUTO</h1>
                         </div>
                     </div>
                 </section>
@@ -16,4 +16,4 @@ class Ayuda extends Component {
         );
     }
 }
-export default Ayuda;
+export default Perfil;

@@ -10,11 +10,11 @@
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "1area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "1area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -23,15 +23,15 @@
                 "pregunta": "pregunta2",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "2area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "area1",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "2area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -40,7 +40,7 @@
                 "pregunta": "pregunta3",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "3area1",
                         "respuesta": "Opcion a"
                     },
                     {
@@ -48,7 +48,7 @@
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "3area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -57,7 +57,7 @@
                 "pregunta": "pregunta4",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "4area1",
                         "respuesta": "Opcion a"
                     },
                     {
@@ -65,7 +65,7 @@
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "4area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -74,7 +74,7 @@
                 "pregunta": "pregunta5",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "5area1",
                         "respuesta": "Opcion1"
                     },
                     {
@@ -82,7 +82,7 @@
                         "respuesta": "Opcion2"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "5area3",
                         "respuesta": "Opcion3"
                     }
                 ]
@@ -96,15 +96,15 @@
                 "pregunta": "pregunta6",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "6area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "6area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "6area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -113,15 +113,15 @@
                 "pregunta": "pregunta7",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "7area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "7area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "7area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -130,15 +130,15 @@
                 "pregunta": "pregunta8",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "8area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "8area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "8area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -147,15 +147,15 @@
                 "pregunta": "pregunta9",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "9area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "9area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "9area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -164,15 +164,15 @@
                 "pregunta": "pregunta10",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "10area1",
                         "respuesta": "Opcion1"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "10area2",
                         "respuesta": "Opcion2"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "10area3",
                         "respuesta": "Opcion3"
                     }
                 ]
@@ -185,15 +185,15 @@
                 "pregunta": "pregunta11",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "11area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "11area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "11area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -202,15 +202,15 @@
                 "pregunta": "pregunta12",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "12rea1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "12area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "12area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -219,15 +219,15 @@
                 "pregunta": "pregunta13",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "13area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "13area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "13area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -236,15 +236,15 @@
                 "pregunta": "pregunta14",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "14area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "14area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "14area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -253,15 +253,15 @@
                 "pregunta": "pregunta15",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "15area1",
                         "respuesta": "Opcion1"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "15area2",
                         "respuesta": "Opcion2"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "15area3",
                         "respuesta": "Opcion3"
                     }
                 ]

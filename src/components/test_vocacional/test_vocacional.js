@@ -3,7 +3,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import question from './preguntas.json';
-
+import _ from "lodash";
 import { Form, Field } from "react-final-form";
 import FormularioGenerico from './../reutilizable/formulario_generico';
 
@@ -12,10 +12,14 @@ class TestVocacional extends FormularioGenerico {
         super(props);
         this.state = {
             activeStep: 0,
-            completed: []
+            completed: [],
+            contadorSubmit: 1,
+            contador: 0,
+            areaProfesional: ""
         }
         this.handleChangeStep = this.handleChangeStep.bind(this);
         this.handleNextStep = this.handleNextStep.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     getCompleted(num) {
@@ -35,18 +39,40 @@ class TestVocacional extends FormularioGenerico {
     handleNextStep() {
         let { completed } = this.state;
         completed.push(this.state.activeStep);
-        this.setState({
-            activeStep: this.state.activeStep + 1
-        });
+        if (this.state.activeStep < question.length - 1) {
+            this.setState({
+                activeStep: this.state.activeStep + 1
+            });
+        }
     }
     async onSubmit(values) {
-        console.log(Object.values(values));
+        this.setState({ contadorSubmit: this.state.contadorSubmit + 1 })
+        if (this.state.contadorSubmit === question.length) {
+            console.log(Object.values(_.groupBy(Object.values(values), (object) => {
+                return object;
+            })));
+            let contador = 0;
+            let areaProfesional = "";
+            Object.values(_.groupBy(Object.values(values), (object) => {
+                return object
+            })).map((object) => {
+                if (object.length > contador) {
+                    contador = object.length;
+                    areaProfesional = object[0];
+                }
+                return true;
+            })
+            console.log("Tu area profesional es" + areaProfesional);
+            this.props.history.push({
+                pathname: '/resultado_test',
+                state: { resultado: { areaProfesional } }
+            })
+        }
     }
 
     renderSection(num) {
         return (
             <div className="column">
-                {question[num].categoria}
                 <Form
                     onSubmit={this.onSubmit}
                     initialValues={!this.props.o ? {} : this.props.o.politico}
@@ -57,6 +83,7 @@ class TestVocacional extends FormularioGenerico {
                     }}
                     render={({ handleSubmit, reset, submitting, pristine, values }) => (
                         <form onSubmit={handleSubmit}>
+
                             {question[num].preguntas.map((o) => {
                                 return (
                                     <div className='field' key={o.pregunta + question[num].categoria}>
@@ -65,7 +92,7 @@ class TestVocacional extends FormularioGenerico {
                                             component={this.renderSelectField}
                                             label="Escoge una opcion"
                                         >
-                                            <option value={'default'}>Seleccione una opcion</option>
+                                            <option value={'default'}>Seleccione una opción</option>
                                             {o.respuestas.map((o) => {
                                                 return (
                                                     <option key={o.respuesta + question[num].categoria} value={o.categoria}>
@@ -106,7 +133,7 @@ class TestVocacional extends FormularioGenerico {
                     {question.map((o) => {
                         return (
                             <Step key={o.categoria}>
-                                <StepButton completed={this.getCompleted(0)}>
+                                <StepButton completed={this.getCompleted(2)}>
                                     {o.categoria}
                                 </StepButton>
                             </Step>

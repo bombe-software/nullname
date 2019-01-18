@@ -22,7 +22,9 @@ import ReportarBug from './mas/reportar_bug';
 import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
 import Motor from './comparador/motor2';
-import Footer from './reutilizable/footer'
+import Footer from './reutilizable/footer';
+import Perfil from './perfil_escuela/perfil';
+import ResultadoTest from './test_vocacional/resultado_test';
 
 import Navbar from './reutilizable/navbar';
 // Crear el link
@@ -74,7 +76,8 @@ class App extends Component {
               <Route path="/acerca_de" component={AcercaDe} />
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
-
+              <Route path="/perfil" component={Perfil} />
+              <Route path="/resultado_test" component={ResultadoTest} />
               <Route exact path="/" component={LandingPage} />
               
               <Route path="/" component={NotFound} />

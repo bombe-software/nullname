@@ -23,7 +23,6 @@ class AcercaDe extends Component {
                 <section className="hero is-white has-text-centered ">
 
                     <div className="columns is-centered">
-
                         <div className="column">
                             <br /> <br />
                             <h1 className="title has-text-grey-darker is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Bombe Software</h1>
@@ -49,13 +48,6 @@ class AcercaDe extends Component {
                         </div>
                     </section>
                 </div>
-
-
-
-
-
-
-
             </div >
         );
     }
