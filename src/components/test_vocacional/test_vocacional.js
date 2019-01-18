@@ -15,7 +15,8 @@ class TestVocacional extends FormularioGenerico {
             completed: [],
             contadorSubmit: 1,
             contador: 0,
-            areaProfesional: ""
+            areaProfesional: "",
+            is_touched: false
         }
         this.handleChangeStep = this.handleChangeStep.bind(this);
         this.handleNextStep = this.handleNextStep.bind(this);
@@ -36,19 +37,23 @@ class TestVocacional extends FormularioGenerico {
         this.setState({ activeStep });
     }
 
-    handleNextStep(values) {
+    handleNextStep(values, reset) {
         let is_error = false;
-        question[this.state.activeStep].preguntas.forEach((o)=>{
-            if(!values[o.pregunta]){
-               is_error = true;
+        question[this.state.activeStep].preguntas.forEach((o) => {
+            if (!values[o.pregunta]) {
+                is_error = true;
+                this.setState({
+                    is_touched: true
+                });
             }
         });
-        if(!is_error){
+        if (!is_error) {
             let { completed } = this.state;
             completed.push(this.state.activeStep);
             if (this.state.activeStep < question.length - 1) {
                 this.setState({
-                    activeStep: this.state.activeStep + 1
+                    activeStep: this.state.activeStep + 1,
+                    is_touched: false
                 });
             }
         }
@@ -72,51 +77,6 @@ class TestVocacional extends FormularioGenerico {
                 state: { resultado: { areaProfesional } }
             })
         }
-    }
-
-    renderSection(num) {
-        return (
-            <div className="column">
-                <Form
-                    onSubmit={this.onSubmit}
-                    validate={values => {
-                        const errors = {};
-                        question[num].preguntas.forEach((o)=>{
-                            if(!values[o.pregunta]){
-                                errors[o.pregunta] = 'Porfavor seleccione una informacion';
-                            }
-                        });
-                        return errors;
-                    }}
-                    render={({ handleSubmit, reset, submitting, pristine, values }) => (
-                        <form onSubmit={handleSubmit} key={question[num].categoria}>
-                            {question[num].preguntas.map((o) => {
-                                return (
-                                    <div  key={o.pregunta + question[num].categoria}>
-                                        <Field name={o.pregunta}
-                                            component={this.renderSelectField}
-                                            label={o.pregunta}
-                                        >
-                                            <option value={'default'}>Seleccione una opción</option>
-                                            {o.respuestas.map((o) => {
-                                                return (
-                                                    <option key={o.respuesta + question[num].categoria} value={o.categoria}>
-                                                        {o.respuesta}
-                                                    </option>
-                                                );
-                                            })}
-                                        </Field>
-                                    </div>
-                                );
-                            })}
-                            <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={()=>this.handleNextStep(values)}>Siguiente</button>
-                        </form>
-                    )
-                    }
-                />
-                < br /> <br />
-            </div>
-        );
     }
 
     render() {
@@ -147,7 +107,50 @@ class TestVocacional extends FormularioGenerico {
                 </Stepper>
                 <div className='columns'>
                     <div className='column'></div>
-                    {this.renderSection(this.state.activeStep)}
+                    <div className="column">
+                        <Form
+                            onSubmit={this.onSubmit}
+                            validate={values => {
+                                const errors = {};
+                                if(this.state.is_touched){
+                                    question[this.state.activeStep].preguntas.forEach((o) => {
+                                        if (!values[o.pregunta]) {
+                                            errors[o.pregunta] = 'Porfavor seleccione una informacion';
+                                        }
+                                    }); 
+                                }
+                                return errors;
+                            }}
+                            render={({ handleSubmit, submitting, pristine, values }) => (
+                                <form onSubmit={handleSubmit}>
+                                    {question.map((obj, i)=> {
+                                        return obj.preguntas.map(o => {
+                                            return (
+                                                <div style={this.state.activeStep === i  ? {} : {display: 'none'}} key={o.pregunta + question[i].categoria}>
+                                                    <Field name={o.pregunta}
+                                                        component={this.renderSelectField}
+                                                        label={o.pregunta}
+                                                    >
+                                                        <option value={'default'}>Seleccione una opción</option>
+                                                        {o.respuestas.map((o) => {
+                                                            return (
+                                                                <option key={o.respuesta + question[i].categoria} value={o.categoria}>
+                                                                    {o.respuesta}
+                                                                </option>
+                                                            );
+                                                        })}
+                                                    </Field>
+                                                </div>
+                                            );
+                                        })
+                                    })}
+                                    <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={() => this.handleNextStep(values)}>Siguiente</button>
+                                </form>
+                            )
+                            }
+                        />
+                        < br /> <br />
+                    </div>
                     <div className='column'></div>
                 </div>
             </div>
