@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './../../assets/loading.css';
 
 export default class LoadingScreen extends Component{
   render(){
