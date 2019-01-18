@@ -96,7 +96,6 @@ class TestVocacional extends FormularioGenerico {
                                         <Field name={o.pregunta}
                                             component={this.renderSelectField}
                                             label={o.pregunta}
-                                            active={num===this.state.activeStep}
                                         >
                                             <option value={'default'}>Seleccione una opción</option>
                                             {o.respuestas.map((o) => {
