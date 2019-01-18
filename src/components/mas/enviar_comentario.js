@@ -1,7 +1,10 @@
 import React from 'react';
+import { graphql } from 'react-apollo';
+import comentario from './../../mutations/enviar_comentario';
 import GenericForm from './../reutilizable/formulario_generico';
 import { Form, Field } from 'react-final-form';
 import Button from "@material-ui/core/Button";
+import Rating from 'react-rating';
 
 class EnviarComentario extends GenericForm {
     constructor(props) {
@@ -9,14 +12,34 @@ class EnviarComentario extends GenericForm {
         this.state = {
             data: {},
             select: "Seleccione una opcion",
-            open: false
+            open: false,
+            value: 0,
+            error: ""
         }
         this.onSubmit = this.onSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     async onSubmit(values) {
-        console.log("Submit succesfully");
+        if (!this.state.value) {
+            this.setState({ error: "Valore la plataforma :)" });
+        }
+        else {
+            this.props.mutate({
+                variables: {
+                    comentario: values.comentario,
+                    estrellas: this.state.value
+                }
+            }).then(()=>{
+                this.props.history.push("./")
+            });
+        }
     }
 
+    handleChange(value) {
+        this.setState({
+            value
+        })
+    }
     render() {
         return (
             <div>
@@ -38,19 +61,8 @@ class EnviarComentario extends GenericForm {
                                 initialValues={this.state.data}
                                 validate={values => {
                                     const errors = {};
-
-                                    if (!values.nombre) {
-                                        errors.nombre = "Ingrese su nombre";
-                                    }
-
-                                    if (!values.partido) {
-                                        errors.partido = "Seleccione el partido";
-                                    }
-                                    if (!values.radio) {
-                                        errors.radiobutton = "Seleccione el partido";
-                                    }
-                                    if (!values.area) {
-                                        errors.area = "Llene este campo";
+                                    if (!values.comentario) {
+                                        errors.comentario = "Llene este campo"
                                     }
                                     return errors;
                                 }}
@@ -59,7 +71,7 @@ class EnviarComentario extends GenericForm {
                                         <div>
                                             <span>
                                                 <Field
-                                                    name="area"
+                                                    name="comentario"
                                                     rows="6"
                                                     label="Comentario"
                                                     component={this.renderAreaText}
@@ -68,6 +80,20 @@ class EnviarComentario extends GenericForm {
                                             </span>
                                         </div>
                                         <br />
+                                        <div>
+                                            <span>
+                                                <Rating {...this.props}
+                                                    onChange={this.handleChange}
+                                                    initialRating={this.state.value}
+                                                    emptySymbol="far fa-star"
+                                                    fullSymbol="fas fa-star"
+                                                    fractions={2}
+                                                />
+                                                <code>
+                                                    {this.state.error}
+                                                </code>
+                                            </span>
+                                        </div>
                                         <Button type="submit" variant="contained" color="secondary" >
                                             Enviar
                                         </Button>
@@ -83,4 +109,4 @@ class EnviarComentario extends GenericForm {
         );
     }
 }
-export default EnviarComentario;
+export default graphql(comentario)(EnviarComentario);
