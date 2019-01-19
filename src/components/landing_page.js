@@ -4,7 +4,7 @@ import laptop from './../assets/students.jpg';
 import pencil from './../assets/pencil.png';
 import mapa from './../assets/map.png';
 import brain from './../assets/interesant.png';
-import white from './../assets/white.png';
+import logo from './../assets/logo.png';
 import './../assets/landing_page.css';
 
 class LandingPage extends Component {
@@ -14,7 +14,7 @@ class LandingPage extends Component {
         <section className="hero-image">
           <div className="degradado"></div>
           <div className="hero-text">
-            <h1 className="is-size-1 has-text-weight-semibold">Busca información acerca de alguna carrera </h1>
+            <h1 className="is-size-1-desktop is-size-2-tablet is-size-3-mobile has-text-weight-semibold">Busca información acerca de alguna carrera </h1>
             <br /><br />
             <h2 className="subtitle has-text-white has-text-weight-light">
               En Unitips estamos completamente comprometidos con la educación en México y la distribución del conocimiento.
@@ -26,7 +26,7 @@ class LandingPage extends Component {
             <div className="container">
               <div className="columns ">
                 <div className="column is-5 is-offset-1">
-                  <img src={white} alt="imagen" />
+                  <img src={logo} alt="imagen" />
                 </div>
                 <div className="column is-5">
                   <p className="title has-text-white-ter ">
@@ -49,7 +49,7 @@ class LandingPage extends Component {
             <div className="container">
               <div className="columns">
                 <div className="column is-6">
-                  <h1 className="title is-1 comparaPadUp has-text-left">
+                  <h1 className="title is-size-1-desktop is-size-2-tablet is-size-3-mobile comparaPadUp has-text-left">
                     Comparador de carrera
                   </h1>
                   <h2 className="subtitle hp-subtitle has-text-left">
@@ -62,8 +62,8 @@ class LandingPage extends Component {
                       ¡Comparar carreras!
                                         </button>
                   </Link>
-
-                  <span className="help comparaPadBot">Por si te lo preguntabas: ¡Sí, es gratis! </span>
+                  <br/>
+                  <span className="is-size-3 has-text-succeess">Por si te lo preguntabas: ¡Sí, es gratis! </span>
                 </div>
                 <div className="column is-6">
                   <img src={laptop} alt='imageload' />

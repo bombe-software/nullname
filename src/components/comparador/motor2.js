@@ -141,8 +141,8 @@ class Comparador extends Component {
             if (bool) {
                 if (e.categoria.nombre !== 'Optativa o Electiva') {
                     return (
-                        <div className="has-text-centered materia materia_compartida" key={e.id}>
-                            {e.nombre}
+                        <div className="has-text-centered is-size-7 materia materia_compartida" key={e.id}>
+                            {e.nombre.length>30?e.nombre.substring(0,34)+"...":e.nombre}
                         </div>
                     );
                 } else {
@@ -151,8 +151,8 @@ class Comparador extends Component {
             } else {
                 if (e.categoria.nombre !== 'Optativa o Electiva') {
                     return (
-                        <div className="has-text-centered materia" key={e.id}>
-                            {e.nombre}
+                        <div className="has-text-centered is-size-7 materia" key={e.id}>
+                            {e.nombre.length>30?e.nombre.substring(0,34)+"...":e.nombre}
                         </div>
                     );
                 } else {
@@ -178,21 +178,28 @@ class Comparador extends Component {
     render() {
         if (this.props.data.loading) return (<LoadingScreen />)
         return (
-            <div>
+            <div className="section">
+            <div className="carrera-container">
                 <div>
+                    <p className="title is-size-4">
                     {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
+                    </p>
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                     </div>
                 </div>
+            </div>
+            <br/>
+            <div className="carrera-container">
                 <div>
+                    <p className="title is-size-4">
                     {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
-                    
+                    </p>
                     <div className='carrera'>
                         {this.renderCarrera(this.props.data.carrera2[1].materias, 1)}
                     </div>
                 </div>
-
+            </div>
             </div>
         );
     }

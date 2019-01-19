@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import empresaWhite from './../../assets/vocacio_white.png'
+import empresaWhite from './../../assets/logo-name-light.png'
 import './../../assets/footer.css';
 class Footer extends Component {
     render() {
         return (
-            <footer className="footer-foot ">
-                <div className="footer-foot has-background-black-ter  has-text-white ">
+            <div>
+                <footer className="footer-foot has-background-black-ter  has-text-white ">
                     <div className="container">
                         <div className="columns padTop is-mobile">
                             <ul className="column has-text-centered">
@@ -51,9 +51,9 @@ class Footer extends Component {
                     <a className="aFooter" href="/pagenotfound"> Bombe Software</a>
                     </div>
                     <br />
-                </div >
+                </footer >
                 <div id="fb-root"></div>
-            </footer >
+            </div>
         );
     }
 }

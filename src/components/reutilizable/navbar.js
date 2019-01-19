@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import vocacio_logo from "./../../assets/vocacio.png";
+import vocacio_logo from "./../../assets/logo-name-dark.png";
 
 class Navbar extends Component {
     constructor(props) {
@@ -21,10 +21,10 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar is-transparent color-navbar" role="navigation" aria-label="main navigation">
+                <nav className="navbar is-warning color-navbar" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
                         <Link className="navbar-item" to="/">
-                            <img src={vocacio_logo} alt="Logo" width="112" height="28" />
+                            <img src={vocacio_logo} alt="Logo" width="110" height="40" />
                         </Link>
 
                         <span className={this.state.isToggleOn ? 'navbar-burger burger is-active' : 'navbar-burger burger'} data-target="nav-demos-menu" onClick={this.handleClick}>

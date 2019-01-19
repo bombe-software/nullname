@@ -81,36 +81,30 @@ class Comparador extends Component {
         if (this.props.data.loading) return <LoadingScreen />;
         return (
             <div>
-                <div>
-                    <section className="hero is-primary">
-                        <div className="hero-body">
-                            <div className="container">
-                                <h1 className="title">
-                                    Comparar carreras</h1>
-                            </div>
-                        </div>
-                    </section>
+                <div className="section">
+                    <div className="container">
+                        <h1 className="title has-text-centered">
+                            Comparar carreras
+                        </h1>
+                        <div className="is-size-5 has-text-centered">Compara las carreras que imparten diversas universidades del país y compara sus planes de estudio</div>
+                    </div>
                 </div>
-                <div className="box is-size-5 has-text-centered">En este apartado, usted podrá comparar las carreras que imparten diversas universidad del país con el fin de visualizar sus planes de estudios y tener un mejor panorama de las diferencias entre ellas.</div>
-                <div className="columns">
+                <div className="container">
+                    <div className="columns">
                     <div className="column">
-                        <article className="message is-link">
-                            <div className="message-header" >
-                                {this.state.carreras[0] === undefined || this.state.carreras.length === 0 ? 'Seleccione una carrera' : (this.state.carreras[0].nombre + "-" + this.state.carreras[0].sede.abreviatura + "-" + this.state.carreras[0].sede.universidad.abreviatura)}
-                                <button className="delete hidden" onClick={() => this.state.carreras[0] ? this.deleteCarrera(0) : ''}></button>
-                            </div>
-                        </article>
-                        <table className="table is-fullwidth">
-                            <thead>
-                                <tr>
-                                    <th className="is-selected" >Nombre de la primera carrera</th>
-                                </tr>
-                            </thead>
+                        <div className={this.state.carreras[0] ? "is-hidden": "level"}>
+                            <div className="level-item"><p className="title has-text-centered is-size-4">Carrera 1</p></div>
+                        </div>
+                        <div className={this.state.carreras[0] ? "notification is-danger": "is-hidden"}>
+                            <span className="is-size-5">{this.state.carreras[0] === undefined || this.state.carreras.length === 0 ? 'Carrera 1' : (this.state.carreras[0].nombre + "-" + this.state.carreras[0].sede.abreviatura + "-" + this.state.carreras[0].sede.universidad.abreviatura)}</span>
+                            <button className="delete hidden is-large" onClick={() => this.state.carreras[0] ? this.deleteCarrera(0) : ''}></button>
+                        </div>
+                        <table className={this.state.carreras[0] ? "is-hidden": "table is-fullwidth"}>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div className={this.state.list1 ? "is-selected disabledDiv" : 'is-selected'} style={{ overflowY: 'auto', height: '400px' }}>
-                                            <table>
+                                        <div className={this.state.list1 ? "is-selected disabledDiv" : 'is-selected'} style={{ overflowY: 'auto', cursor:'pointer', height: '400px' }}>
+                                            <table className="table is-hoverable">
                                                 <tbody>
                                                     {this.renderCarreras(this.state.carrerasProps, 0)}
                                                 </tbody>
@@ -121,25 +115,21 @@ class Comparador extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <br />
+
                     <div className="column">
-                        <article className="message is-info">
-                            <div className="message-header" >
-                                {this.state.carreras[1] === undefined || this.state.carreras.length === 0 ? 'Seleccione otra carrera' : (this.state.carreras[1].nombre + "-" + this.state.carreras[1].sede.abreviatura + "-" + this.state.carreras[1].sede.universidad.abreviatura)}
-                                <button className="delete" onClick={() => this.state.carreras[1] ? this.deleteCarrera(1) : ''}></button>
-                            </div>
-                        </article>
-                        <table className="table is-fullwidth">
-                            <thead>
-                                <tr>
-                                    <th className="is-selected" >Nombre de la segunda carrera</th>
-                                </tr>
-                            </thead>
+                        <div className={this.state.carreras[1] ? "is-hidden": "level"}>
+                            <div className="level-item"><p className="title has-text-centered is-size-4">Carrera 2</p></div>
+                        </div>
+                        <div className={this.state.carreras[1] ? "notification is-danger": "is-hidden"}>
+                            <span className="is-size-5">{this.state.carreras[1] === undefined || this.state.carreras.length === 0 ? 'Carrera 2' : (this.state.carreras[1].nombre + "-" + this.state.carreras[1].sede.abreviatura + "-" + this.state.carreras[1].sede.universidad.abreviatura)}</span>
+                            <button className="delete hidden is-large" onClick={() => this.state.carreras[1] ? this.deleteCarrera(1) : ''}></button>
+                        </div>
+                        <table className={this.state.carreras[1] ? "is-hidden": "table is-fullwidth"}>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div className={this.state.list2 ? "is-selected disabledDiv" : 'is-selected'} style={{ overflowY: 'auto', height: '400px' }}>
-                                            <table>
+                                        <div className={this.state.list2 ? "is-selected disabledDiv" : 'is-selected'} style={{ overflowY: 'auto', cursor:'pointer', height: '400px' }}>
+                                            <table className="table is-hoverable">
                                                 <tbody>
                                                     {this.renderCarreras(this.state.carrerasProps, 1)}
                                                 </tbody>
@@ -150,19 +140,18 @@ class Comparador extends Component {
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div className="columns">
-                    <div className="column">
                     </div>
-                    <div className={(!this.state.list1 || !this.state.list2) ? "disabledDiv column" : 'column'}>
-
+                </div>
+                <div className="section">
+                    <div className="level">
+                    <div className={(!this.state.list1 || !this.state.list2) ? "disabledDiv level-item" : 'level-item'}>
                         <Link to={'comparador/' + (this.state.carreras[0] === undefined ? '' : this.state.carreras[0].id) + '/' + (this.state.carreras[1] === undefined ? '' : this.state.carreras[1].id)}>
                             <button className="button is-large is-fullwidth is-danger">
                                 <strong>  Comparar</strong>
                             </button>
                         </Link>
                     </div>
-                    <div className="column"></div>
+                    </div>
                 </div>
             </div>
         );

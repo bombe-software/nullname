@@ -2,10 +2,15 @@
     border-style: dashed;
     border-width: 4px; 
     padding: 0.1em;
-    width: 100px;
-    height: 6em;
+    flex: 0 0 100px;
     margin: 10px;
     font-size: 0.8em;
+}
+
+.carrera-container{
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .materia_compartida{
