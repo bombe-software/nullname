@@ -82,18 +82,18 @@ class TestVocacional extends FormularioGenerico {
     render() {
         return (
             <div>
-                <section className="hero is-link is-bold">
+                <div className="hero is-danger is-bold">
                     <div className="hero-body">
                         <div className="container">
-                            <h1 className="title">
+                            <h1 className="title has-text-centered">
                                 Test vocacional
                             </h1>
-                            <h2 className="subtitle">
+                            <h2 className="subtitle has-text-centered">
                                 Descubre a que área profesional debes pertenecer con  tan sólo algunas cuantas preguntas.
                             </h2>
                         </div>
                     </div>
-                </section>
+                </div>
                 <Stepper alternativeLabel nonLinear activeStep={this.state.activeStep}>
                     {question.map((o, i) => {
                         return (
@@ -105,9 +105,10 @@ class TestVocacional extends FormularioGenerico {
                         );
                     })}
                 </Stepper>
-                <div className='columns'>
-                    <div className='column'></div>
-                    <div className="column">
+                <div className='container'>
+                    <div className="section">
+                        <div className="columns is-mobile">
+                        <div className="column is-centered is-8-desktop is-offset-2-desktop">
                         <Form
                             onSubmit={this.onSubmit}
                             validate={values => {
@@ -140,18 +141,24 @@ class TestVocacional extends FormularioGenerico {
                                                             );
                                                         })}
                                                     </Field>
+                                                    <br />
                                                 </div>
                                             );
                                         })
                                     })}
-                                    <button type="submit" disabled={submitting} className="button is-rounded is-danger" onClick={() => this.handleNextStep(values)}>Siguiente</button>
+                                    <br />
+                                    <div className="level">
+                                        <div className="level-item has-text-centered">
+                                        <button type="submit" disabled={submitting} className="button is-rounded is-link is-medium" onClick={() => this.handleNextStep(values)}>Siguiente</button>
+                                        </div>
+                                    </div>
                                 </form>
                             )
                             }
                         />
-                        < br /> <br />
+                        </div>
+                        </div>
                     </div>
-                    <div className='column'></div>
                 </div>
             </div>
         );

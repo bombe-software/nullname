@@ -86,7 +86,7 @@ class Comparador extends Component {
                         <h1 className="title has-text-centered">
                             Comparar carreras
                         </h1>
-                        <div className="is-size-5 has-text-centered">Compara las carreras que imparten diversas universidades del país y compara sus planes de estudio</div>
+                        <h2 className="subtitle has-text-centered">Compara las carreras que imparten diversas universidades del país y compara sus planes de estudio</h2>
                     </div>
                 </div>
                 <div className="container">
