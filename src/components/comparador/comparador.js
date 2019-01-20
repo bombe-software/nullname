@@ -81,14 +81,17 @@ class Comparador extends Component {
         if (this.props.data.loading) return <LoadingScreen />;
         return (
             <div>
-                <div className="section">
+                <div className="hero is-danger is-bold">
+                    <div className="hero-body">
                     <div className="container">
                         <h1 className="title has-text-centered">
                             Comparar carreras
                         </h1>
                         <h2 className="subtitle has-text-centered">Compara las carreras que imparten diversas universidades del país y compara sus planes de estudio</h2>
                     </div>
+                    </div>
                 </div>
+                <br />
                 <div className="container">
                     <div className="columns">
                     <div className="column">
