@@ -116,7 +116,7 @@ class TestVocacional extends FormularioGenerico {
                                 if(this.state.is_touched){
                                     question[this.state.activeStep].preguntas.forEach((o) => {
                                         if (!values[o.pregunta]) {
-                                            errors[o.pregunta] = 'Porfavor seleccione una informacion';
+                                            errors[o.pregunta] = 'Seleccione una opción';
                                         }
                                     }); 
                                 }
