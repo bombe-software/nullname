@@ -21,7 +21,7 @@ import Ayuda from './mas/ayuda';
 import EnviarComentario from './mas/enviar_comentario';
 import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
-import Motor from './comparador/motor2';
+import Motor from './comparador/motor';
 import Footer from './reutilizable/footer';
 import Perfil from './perfil/perfil_escuela/perfil';
 import Universidades from './perfil/perfil_universidad/index';
