@@ -4,6 +4,7 @@ import laptop from './../assets/students.jpg';
 import pencil from './../assets/pencil.png';
 import mapa from './../assets/map.png';
 import brain from './../assets/interesant.png';
+import university from './../assets/school.png' 
 import logo from './../assets/logo.png';
 import './../assets/landing_page.css';
 
@@ -109,6 +110,14 @@ class LandingPage extends Component {
                   <div className="box"><h2 className="titleBox">Datos interesantes</h2><img className="logo" src={brain} alt="imageload" />
                     <p>¿Interesado en algunas estadísticas? Descubre algunos datos que te podrían dar una mejor claridad de algunas universidades</p>
                     <Link to='datos_importantes'>
+                      <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="column level-item">
+                  <div className="box"><h2 className="titleBox">Universidades</h2><img className="logo" src={university} alt="imageload" />
+                    <p>¿UNAM o Poli? Descubre un poco más acerca de éstas universidades en este momento.</p>
+                    <Link to='universidades'>
                       <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>
                   </div>
