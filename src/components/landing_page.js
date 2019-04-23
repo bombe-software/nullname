@@ -38,7 +38,7 @@ class LandingPage extends Component {
                                     </p>
                   <p className="subtitle has-text-white-ter ">
                     Contamos una base de datos en donde tenemos miles de materias registradas de las respectivas carreras
-                                        de las universidades. <strong>¿Genial no?</strong>
+                                        de las universidades. <strong className="subtitle has-text-white-ter ">¿Genial no?</strong>
                   </p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ class LandingPage extends Component {
                 </div>
                 <div className="column level-item">
                   <div className="box"><h2 className="titleBox">Universidades</h2><img className="logo" src={university} alt="imageload" />
-                    <p>¿UNAM o Poli? Descubre un poco más acerca de éstas universidades en este momento.</p>
+                    <p>¿UNAM o IPN? Descubre un poco más acerca de estas universidades en este momento.</p>
                     <Link to='universidades'>
                       <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>
