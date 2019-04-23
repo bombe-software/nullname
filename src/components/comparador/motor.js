@@ -85,7 +85,7 @@ class Comparador extends Component {
                 }
             });
         });
-        if ((contador / maximum) >= 0.5) {
+        if ((contador / maximum) >= 0.6) {
             return true;
         } else {
             return false;
