@@ -16,39 +16,39 @@ class Footer extends Component {
                                 </li>
                                 <li>&nbsp;</li>
                                 <li className="footer-social">
-                                    <span className="icon is-medium"><i className="fab fa-facebook-f iconFooter"></i></span>
-                                    <span className="icon is-medium"><i className="fab fa-twitter iconFooter"></i></span>
-                                    <span className="icon is-medium"><i className="fab fa-instagram iconFooter"></i></span>
+                                    <span className="icon is-medium"><a href="https://www.facebook.com/bombesoftware/"><i className="fab fa-facebook-f iconFooter"></i></a></span>
+                                    <span className="icon is-medium"><a href="https://twitter.com/bombesoftware"><i className="fab fa-twitter iconFooter"></i></a></span>
+                                    <span className="icon is-medium"><a href="https://www.instagram.com/bombesoftware/"><i className="fab fa-instagram iconFooter"></i></a></span>
                                 </li>
                             </ul>
                             <ul className="column">
                                 <li className="footer-title is-uppercase has-text-weight-bold ">Comparar Carreras</li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout">Compara carreras</a></li>
+                                <li><a className="aFooter toggleadd" href="/comparador">Compara carreras</a></li>
                             </ul>
                             <ul className="column is-hidden-tiny">
                                 <li className="footer-title is-uppercase has-text-weight-bold">Test Vocacional</li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout">Realiza el test</a></li>
+                                <li><a className="aFooter toggleadd" href="/test">Realiza el test</a></li>
                             </ul>
 
                             <ul className="column is-hidden-touch">
                                 <li className="footer-title is-uppercase has-text-weight-bold">Mapa</li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout" >Ver mapa</a></li>
+                                <li><a className="aFooter toggleadd" href="/mapa" >Ver mapa</a></li>
                             </ul>
                             <ul className="column">
                                 <li className="footer-title is-uppercase has-text-weight-bold">Datos importantes</li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout">Descubrelos</a></li>
+                                <li><a className="aFooter toggleadd" href="/datos_importantes">Descubrelos</a></li>
                             </ul>
                             <ul className="column is-hidden-touch">
                                 <li className="footer-title is-uppercase has-text-weight-bold">Mas</li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout" >Ayuda</a></li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout" >Acerca de</a></li>
-                                <li><a className="aFooter toggleadd" href="/pagenotfout" >Reportar bug</a></li>
+                                <li><a className="aFooter toggleadd" href="/ayuda" >Ayuda</a></li>
+                                <li><a className="aFooter toggleadd" href="/acerca_de" >Acerca de</a></li>
+                                <li><a className="aFooter toggleadd" href="/reportar_bug" >Reportar bug</a></li>
                             </ul>
                         </div >
                     </div >
                     <div className="container has-text-centered">
                         &copy; 2019						-
-                    <a className="aFooter" href="/pagenotfound"> Bombe Software</a>
+                    <a className="aFooter" href="http://www.bombesoftware.com/"> Bombe Software</a>
                     </div>
                     <br />
                 </footer >

@@ -50,19 +50,19 @@ class LandingPage extends Component {
               <div className="columns">
                 <div className="column is-6">
                   <h1 className="title is-size-1-desktop is-size-2-tablet is-size-3-mobile comparaPadUp has-text-left">
-                    Comparador de carrera
+                    Comparador de carreras
                   </h1>
                   <h2 className="subtitle hp-subtitle has-text-left">
                     <br />
-                    Compara las carreras de las diversidas carreras que existen, con el fin de ver las materias que
+                    Compara las diversas carreras que existen, con el fin de ver las materias que
                     comparten y sus enfoques diferentes. Sin duda, <strong>una gran herramienta </strong>¿no lo crees?
                   </h2>
                   <Link to='comparador'>
                     <button className="button buttonGo is-medium is-danger">
                       ¡Comparar carreras!
-                                        </button>
+                    </button>
                   </Link>
-                  <br/>
+                  <br />
                   <span className="is-size-3 has-text-succeess">Por si te lo preguntabas: ¡Sí, es gratis! </span>
                 </div>
                 <div className="column is-6">
@@ -77,9 +77,10 @@ class LandingPage extends Component {
             <div className="columns is-centered ">
               <div className="column is-three-fifths ">
                 <h1 className="title is-spaced is-size-2-desktop is-size-4-mobile has-text-white">Más módulos</h1>
-                <h2 className="subtitle is-size-5-desktop has-text-white">Para comenzar, divimos nuestra plataforma en tres módulos
-                                esenciales donde desplegaremos información. Cada uno retroalimenta la capacidad de diferenciar carreras 
-                                de las universidades entre sí.</h2>
+                <h2 className="subtitle is-size-5-desktop has-text-white">
+                Para comenzar, divimos nuestra plataforma en tres módulos
+                esenciales donde desplegaremos información. Cada uno retroalimenta la capacidad de diferenciar carreras
+                de las universidades entre sí.</h2>
               </div>
             </div>
           </div>
@@ -90,7 +91,7 @@ class LandingPage extends Component {
               <div className="columns is-centered level">
                 <div className="column level-item">
                   <div className="box"><h2 className="titleBox">Test Vocacional</h2><img className="logo" src={pencil} alt="imageload" />
-                    <p>No sabes por donde empezar? Descubre el <strong>área profesional</strong> al que deberías pertenecer con este sencillo test</p>
+                    <p>¿No sabes por donde empezar? Descubre el <strong>área profesional</strong> al que deberías pertenecer con este sencillo test</p>
                     <Link to='test'>
                       <button className="button is-danger buttonGo is-rounded">Ir ahora</button>
                     </Link>

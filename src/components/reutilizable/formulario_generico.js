@@ -98,7 +98,7 @@ render() {
 
     </div>
   );
-}
+  }
 }
 
 export default GenericForm;
