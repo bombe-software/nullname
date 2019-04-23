@@ -16,21 +16,16 @@ class PerfilUniversidad extends Component {
         this.renderUniversidades = this.renderUniversidades.bind(this);
     }
 
-    toggle(src){
-//this.setState({source: src});
-    }
-
     renderUniversidades() {
         let universidades = this.props.data.universidades;
         return universidades.map(universidad => {
-           
             return (
                 <div key={universidad.id}>
-                    <img className="image is-128x128" src={`${api}/img/${universidad.logo}`} alt={"Loading..."} />
+                    <img className="image is-128x128" src={`${api}/img/${universidad.logo}`} alt={`${universidad.logo}`} />
                     <h1>{universidad.nombre}</h1>
                     <h1>{universidad.abreviatura}</h1>
                     <Link to={`/universidad/${universidad.id}`}>
-                        <span className="is-6"><i className="fa fa-pencil"></i> Modificar</span>
+                        <button className="button is-primary">Perfil</button>
                     </Link>
                     <br />
                 </div>
@@ -40,21 +35,20 @@ class PerfilUniversidad extends Component {
 
     render() {
         if (this.props.data.loading) { return (<div>Loading...</div>) }
-        // console.log(this.props);
         return (
             <div>
                 <section className="hero is-primary is-bold">
                     <div className="hero-body">
                         <div className="container">
                             <h1 className="title">
-                                Universidades</h1>
+                                Universidades
+                            </h1>
                         </div>
                     </div>
                 </section>
                 {this.renderUniversidades()}
             </div>
         );
-
     }
 }
 export default graphql(universidades)(PerfilUniversidad);
