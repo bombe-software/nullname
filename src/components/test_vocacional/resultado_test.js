@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Radar} from 'react-chartjs-2';
+import { graphql } from 'react-apollo';
+// import { Link } from "react-router-dom";
+import carrera from './../../queries/carrera';
 
 class ResultadoTest extends Component {
 
@@ -60,10 +63,13 @@ class ResultadoTest extends Component {
                         </div>
                     </div>
                     <br />
+                    Algunas carreras que te podría interesar conforme a tu perfil:
 
                 </section>
             </div>
         );
     }
 }
-export default ResultadoTest;
+export default graphql(carrera, {
+    options: (props) => { return { variables: { id: props.match.params.id } } }
+})(ResultadoTest);

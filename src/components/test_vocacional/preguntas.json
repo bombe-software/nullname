@@ -6,16 +6,24 @@
                 "pregunta": "pregunta1",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "Ciencias Médico Biológicas",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "Ciencias Físico Matemáticas",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "Ciencias Sociales y Administrativas",
                         "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
                     }
                 ]
             },
@@ -23,16 +31,24 @@
                 "pregunta": "pregunta2",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "Ciencias Médico Biológicas",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "Ciencias Físico Matemáticas",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "Ciencias Sociales y Administrativas",
                         "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
                     }
                 ]
             },
@@ -40,16 +56,104 @@
                 "pregunta": "pregunta3",
                 "respuestas": [
                     {
-                        "categoria": "area1",
+                        "categoria": "Ciencias Médico Biológicas",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area2",
+                        "categoria": "Ciencias Físico Matemáticas",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "area3",
+                        "categoria": "Ciencias Sociales y Administrativas",
                         "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Categoria 2",
+        "preguntas": [
+            {
+                "pregunta": "pregunta4",
+                "respuestas": [
+                    {
+                        "categoria": "Ciencias Médico Biológicas",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "Ciencias Físico Matemáticas",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "Ciencias Sociales y Administrativas",
+                        "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
+                    }
+                ]
+            },
+            {
+                "pregunta": "pregunta5",
+                "respuestas": [
+                    {
+                        "categoria": "Ciencias Médico Biológicas",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "Ciencias Físico Matemáticas",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "Ciencias Sociales y Administrativas",
+                        "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
+                    }
+                ]
+            },
+            {
+                "pregunta": "pregunta6",
+                "respuestas": [
+                    {
+                        "categoria": "Ciencias Médico Biológicas",
+                        "respuesta": "Opcion a"
+                    },
+                    {
+                        "categoria": "Ciencias Físico Matemáticas",
+                        "respuesta": "Opcion b"
+                    },
+                    {
+                        "categoria": "Ciencias Sociales y Administrativas",
+                        "respuesta": "Opcion c"
+                    },
+                    {
+                        "categoria": "Humanidades y Artes",
+                        "respuesta": "Opcion d"
+                    },
+                    {
+                        "categoria": "Interdisciplinaria",
+                        "respuesta": "Opcion e"
                     }
                 ]
             }
