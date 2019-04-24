@@ -78,7 +78,7 @@ class App extends Component {
               <Route path="/acerca_de" component={AcercaDe} />
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
-              <Route path="/perfilEscuela" component={Perfil} />
+              <Route path="/universidad/:id1/escuela/:id2" component={Perfil} />
               <Route path="/universidades" component={Universidades} />
               <Route path="/universidad/:id" component={PerfilUniversidad} />
               <Route path="/resultado_test" component={ResultadoTest} />
