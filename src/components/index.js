@@ -23,9 +23,10 @@ import AcercaDe from './mas/acerca_de';
 import NotFound from './reutilizable/not_found';
 import Motor from './comparador/motor';
 import Footer from './reutilizable/footer';
-import Perfil from './perfil/perfil_escuela/perfil';
+import PerfilEscuela from './perfil/perfil_escuela/perfil';
 import Universidades from './perfil/perfil_universidad/index';
 import PerfilUniversidad  from './perfil/perfil_universidad/perfil';
+import PerfilCarrera from './perfil/perfil_carrera/perfil';
 import ResultadoTest from './test_vocacional/resultado_test';
 
 import Navbar from './reutilizable/navbar';
@@ -78,11 +79,13 @@ class App extends Component {
               <Route path="/acerca_de" component={AcercaDe} />
               <Route path="/datos_importantes" component={DatosImportantes} />
               <Route path="/mapa" component={Mapa} />
-              <Route path="/universidad/:id1/escuela/:id2" component={Perfil} />
-              <Route path="/universidades" component={Universidades} />
+              <Route path="/universidad/:id1/escuela/:id2/carrera/:id3" component={PerfilCarrera} />
+              <Route path="/universidad/:id1/escuela/:id2" component={PerfilEscuela} />
               <Route path="/universidad/:id" component={PerfilUniversidad} />
+              <Route path="/universidades" component={Universidades} />
               <Route path="/resultado_test" component={ResultadoTest} />
               <Route exact path="/" component={LandingPage} />
+
               
               <Route path="/" component={NotFound} />
             </Switch>
