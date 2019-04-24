@@ -166,7 +166,7 @@ class Comparador extends Component {
         }));
         return materias.map((e) => {
             return (
-                <div className='semestre' key={e[0].id}>
+                <div className='column is-1' key={e[0].id}>
                     {this.renderSemestre(e, posicion)}
                 </div>
             );
@@ -182,7 +182,7 @@ class Comparador extends Component {
                         <p className="title is-size-4">
                             {this.props.data.carrera2[0].nombre}-{this.props.data.carrera2[0].sede.abreviatura}-{this.props.data.carrera2[0].sede.universidad.abreviatura}
                         </p>
-                        <div className='carrera'>
+                        <div className='columns'>
                             {this.renderCarrera(this.props.data.carrera2[0].materias, 0)}
                         </div>
                     </div>
@@ -193,7 +193,7 @@ class Comparador extends Component {
                         <p className="title is-size-4">
                             {this.props.data.carrera2[1].nombre}-{this.props.data.carrera2[1].sede.abreviatura}-{this.props.data.carrera2[1].sede.universidad.abreviatura}
                         </p>
-                        <div className='carrera'>
+                        <div className='columns'>
                             {this.renderCarrera(this.props.data.carrera2[1].materias, 1)}
                         </div>
                     </div>
