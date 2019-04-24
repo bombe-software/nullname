@@ -61,20 +61,23 @@ class TestVocacional extends FormularioGenerico {
     async onSubmit(values) {
         this.setState({ contadorSubmit: this.state.contadorSubmit + 1 });
         if (this.state.contadorSubmit === question.length) {
-            let contador = 0;
-            let areaProfesional = "";
-            Object.values(_.groupBy(Object.values(values), (object) => {
+            let resultado = Object.values(_.groupBy(Object.values(values), (object) => {
                 return object
-            })).map((object) => {
-                if (object.length > contador) {
-                    contador = object.length;
-                    areaProfesional = object[0];
+            }));
+            resultado = resultado.map(o=>{
+                return {nombre: o[0], contador: o.length}
+            });
+            let mayor = "";
+            let max = 0;
+            resultado.forEach(o=>{
+                if(o.contador > max){
+                    max = o.contador;
+                    mayor = o.nombre;
                 }
-                return true;
-            })
+            });
             this.props.history.push({
                 pathname: '/resultado_test',
-                state: { resultado: { areaProfesional } }
+                state: { resultado, mayor }
             })
         }
     }

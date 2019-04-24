@@ -10,11 +10,11 @@
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "1area2",
+                        "categoria": "area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "1area3",
+                        "categoria": "area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -23,15 +23,15 @@
                 "pregunta": "pregunta2",
                 "respuestas": [
                     {
-                        "categoria": "2area1",
+                        "categoria": "area1",
                         "respuesta": "Opcion a"
                     },
                     {
-                        "categoria": "area1",
+                        "categoria": "area2",
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "2area3",
+                        "categoria": "area3",
                         "respuesta": "Opcion c"
                     }
                 ]
@@ -40,7 +40,7 @@
                 "pregunta": "pregunta3",
                 "respuestas": [
                     {
-                        "categoria": "3area1",
+                        "categoria": "area1",
                         "respuesta": "Opcion a"
                     },
                     {
@@ -48,221 +48,8 @@
                         "respuesta": "Opcion b"
                     },
                     {
-                        "categoria": "3area3",
+                        "categoria": "area3",
                         "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta4",
-                "respuestas": [
-                    {
-                        "categoria": "4area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "4area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta5",
-                "respuestas": [
-                    {
-                        "categoria": "5area1",
-                        "respuesta": "Opcion1"
-                    },
-                    {
-                        "categoria": "area2",
-                        "respuesta": "Opcion2"
-                    },
-                    {
-                        "categoria": "5area3",
-                        "respuesta": "Opcion3"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "categoria": "Categoria 2",
-        "preguntas": [
-            {
-                "pregunta": "pregunta6",
-                "respuestas": [
-                    {
-                        "categoria": "6area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "6area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "6area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta7",
-                "respuestas": [
-                    {
-                        "categoria": "7area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "7area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "7area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta8",
-                "respuestas": [
-                    {
-                        "categoria": "8area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "8area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "8area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta9",
-                "respuestas": [
-                    {
-                        "categoria": "9area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "9area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "9area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta10",
-                "respuestas": [
-                    {
-                        "categoria": "10area1",
-                        "respuesta": "Opcion1"
-                    },
-                    {
-                        "categoria": "10area2",
-                        "respuesta": "Opcion2"
-                    },
-                    {
-                        "categoria": "10area3",
-                        "respuesta": "Opcion3"
-                    }
-                ]
-            }
-        ]
-    },{
-        "categoria": "Categoria 3",
-        "preguntas": [
-            {
-                "pregunta": "pregunta11",
-                "respuestas": [
-                    {
-                        "categoria": "11area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "11area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "11area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta12",
-                "respuestas": [
-                    {
-                        "categoria": "12rea1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "12area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "12area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta13",
-                "respuestas": [
-                    {
-                        "categoria": "13area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "13area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "13area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta14",
-                "respuestas": [
-                    {
-                        "categoria": "14area1",
-                        "respuesta": "Opcion a"
-                    },
-                    {
-                        "categoria": "14area2",
-                        "respuesta": "Opcion b"
-                    },
-                    {
-                        "categoria": "14area3",
-                        "respuesta": "Opcion c"
-                    }
-                ]
-            },
-            {
-                "pregunta": "pregunta15",
-                "respuestas": [
-                    {
-                        "categoria": "15area1",
-                        "respuesta": "Opcion1"
-                    },
-                    {
-                        "categoria": "15area2",
-                        "respuesta": "Opcion2"
-                    },
-                    {
-                        "categoria": "15area3",
-                        "respuesta": "Opcion3"
                     }
                 ]
             }
