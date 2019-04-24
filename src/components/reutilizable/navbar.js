@@ -40,7 +40,8 @@ class Navbar extends Component {
                             <Link to="/test" className="navbar-item">Test vocacional </Link>
                             <Link to="/mapa" className="navbar-item">Mapa </Link>
                             <Link to="/datos_importantes" className="navbar-item">Datos interesantes </Link>
-                            <div className="navbar-item has-dropdown is-hoverable">
+                            <Link to="/universidades" className="navbar-item">Universidades </Link>
+                        <div className="navbar-item has-dropdown is-hoverable">
                                 <span className="navbar-link">Mas</span>
                                 <div className="navbar-dropdown">
                                     <Link to="/ayuda" className="navbar-item">Ayuda </Link>
